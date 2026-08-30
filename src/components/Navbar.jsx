@@ -84,11 +84,12 @@ export default function Navbar({ activePage, setActivePage }) {
           >
             <div className="w-9 h-9 sm:w-11 sm:h-11 md:w-13 md:h-13 rounded-full border-2 border-amber-400 overflow-hidden shadow-md flex items-center justify-center bg-white shrink-0 group-hover:scale-105 transition-transform duration-300">
               <img
-                src="/src/assets/images/dattabal_logo.png"
+                src="/images/dattabal_logo.png"
                 alt="Shri Dattabal Mission Divine Kolhapur Logo"
                 className="w-full h-full object-cover"
               />
             </div>
+
             <div className="min-w-0">
               <div className="text-white font-serif font-extrabold text-xs sm:text-sm md:text-base lg:text-lg tracking-wide leading-tight group-hover:text-amber-200 transition-colors truncate">
                 SHRI DATTABAL VIDYAMANDIR

@@ -67,29 +67,30 @@ export default function StudentLifeSection({ setActivePage }) {
           <div className="lg:col-span-6 grid grid-cols-2 gap-4">
             <div className="space-y-4">
               <img
-                src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=600&auto=format&fit=crop"
-                alt="Sports & Drill Ground"
+                src="/images/sports_ground.jpg"
+                alt="Sports & Lezim Drill Ground"
                 className="w-full h-56 object-cover rounded-2xl shadow-md border border-slate-200"
               />
               <img
-                src="/src/assets/images/library.jpg"
-                alt="1373 Books Library Reading"
+                src="/images/library.jpg"
+                alt="1,373 Books Saraswati Library"
                 className="w-full h-40 object-cover rounded-2xl shadow-md border border-slate-200"
               />
             </div>
             <div className="space-y-4 pt-6">
               <img
-                src="/src/assets/images/science_lab.jpg"
+                src="/images/computer_lab.jpg"
                 alt="Computer Literacy Lab"
                 className="w-full h-40 object-cover rounded-2xl shadow-md border border-slate-200"
               />
               <img
-                src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=600&auto=format&fit=crop"
+                src="/images/cultural_gathering.jpg"
                 alt="Cultural Annual Gathering"
                 className="w-full h-56 object-cover rounded-2xl shadow-md border border-slate-200"
               />
             </div>
           </div>
+
         </div>
       </div>
     </section>

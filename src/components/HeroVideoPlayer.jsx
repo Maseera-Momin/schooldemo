@@ -10,34 +10,35 @@ export default function HeroVideoPlayer({ onOpenGallery }) {
     {
       title: "Main Campus Entrance & Tree-lined Pathway",
       sub: "Shri Dattabal Vidyamandir",
-      image: "/src/assets/images/hero_campus.jpg",
-      pan: { scale: [1, 1.15], x: [0, -15], y: [0, -10] }
+      image: "/images/hero_campus.jpg",
+      pan: { scale: [1, 1.12], x: [0, -10], y: [0, -8] }
     },
     {
-      title: "19 Classrooms & Instructional Grounds",
-      sub: "Daily Academic Learning",
-      image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=1200&auto=format&fit=crop",
-      pan: { scale: [1.1, 1.25], x: [10, -10], y: [-5, 5] }
+      title: "19 Classrooms & Daily Learning",
+      sub: "Active Primary Education",
+      image: "/images/classroom.jpg",
+      pan: { scale: [1.08, 1.2], x: [8, -8], y: [-4, 4] }
     },
     {
       title: "School Library (1,373+ Books)",
-      sub: "Knowledge & Literature Center",
-      image: "/src/assets/images/library.jpg",
-      pan: { scale: [1, 1.18], x: [-10, 10], y: [0, -15] }
+      sub: "Saraswati Library & Reading Center",
+      image: "/images/library.jpg",
+      pan: { scale: [1, 1.15], x: [-8, 8], y: [0, -10] }
     },
     {
-      title: "Sports Playground & Daily Drills",
-      sub: "Athletics, Lezim & Physical Training",
-      image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1200&auto=format&fit=crop",
-      pan: { scale: [1.12, 1], x: [0, 15], y: [-10, 0] }
+      title: "Sports Playground & Lezim Drills",
+      sub: "Athletics & Physical Training",
+      image: "/images/sports_ground.jpg",
+      pan: { scale: [1.1, 1], x: [0, 10], y: [-8, 0] }
     },
     {
       title: "Annual Gathering & Cultural Celebrations",
       sub: "Student Arts & Heritage",
-      image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop",
-      pan: { scale: [1, 1.2], x: [15, -15], y: [5, -5] }
+      image: "/images/cultural_gathering.jpg",
+      pan: { scale: [1, 1.16], x: [10, -10], y: [4, -4] }
     }
   ];
+
 
   // Continuous auto-rotation every 3.8 seconds
   useEffect(() => {

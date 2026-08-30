@@ -22,11 +22,12 @@ export default function Footer({ setActivePage }) {
           <div className="flex items-center gap-3">
             <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border-2 border-amber-400 overflow-hidden bg-white shrink-0">
               <img
-                src="/src/assets/images/dattabal_logo.png"
+                src="/images/dattabal_logo.png"
                 alt="Shri Dattabal Mission Divine Kolhapur"
                 className="w-full h-full object-cover"
               />
             </div>
+
             <div>
               <div className="text-white font-serif font-extrabold text-sm sm:text-base leading-tight">
                 SHRI DATTABAL VIDYAMANDIR

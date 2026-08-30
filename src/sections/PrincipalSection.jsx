@@ -10,9 +10,9 @@ export default function PrincipalSection() {
           {/* Headmaster Image & Mission Emblem */}
           <div className="lg:col-span-5 relative bg-slate-900 flex flex-col justify-end">
             <img
-              src="/src/assets/images/principal.jpg"
+              src="/images/principal.jpg"
               alt="Sawant Jayshree Tanaji - Head Teacher"
-              className="w-full h-full object-cover min-h-[380px] lg:min-h-[480px] opacity-90"
+              className="w-full h-full object-cover min-h-[380px] lg:min-h-[480px] opacity-95"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#021f4a] via-transparent to-transparent" />
 
@@ -20,7 +20,7 @@ export default function PrincipalSection() {
             <div className="absolute top-6 left-6 flex items-center gap-3 bg-black/60 backdrop-blur-md px-3.5 py-2 rounded-full border border-white/20">
               <div className="w-8 h-8 rounded-full overflow-hidden border border-amber-400">
                 <img
-                  src="/src/assets/images/dattabal_logo.png"
+                  src="/images/dattabal_logo.png"
                   alt="Shri Dattabal Mission Divine"
                   className="w-full h-full object-cover"
                 />
@@ -28,6 +28,7 @@ export default function PrincipalSection() {
               <span className="text-xs font-bold text-amber-300">Shri Dattabal Vidyamandir</span>
             </div>
           </div>
+
 
           {/* Principal Message Content */}
           <div className="lg:col-span-7 p-8 lg:p-12 flex flex-col justify-center space-y-6">

@@ -99,7 +99,7 @@ export default function AcademicsOverview({ setActivePage }) {
                 <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-md space-y-4">
                   <div className="w-full h-48 rounded-xl overflow-hidden relative">
                     <img
-                      src={activeLevel.id === 'pre-primary' ? "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop" : activeLevel.id === 'primary' ? "/src/assets/images/library.jpg" : "/src/assets/images/science_lab.jpg"}
+                      src={activeLevel.id === 'pre-primary' ? "/images/classroom.jpg" : activeLevel.id === 'primary' ? "/images/library.jpg" : "/images/computer_lab.jpg"}
                       alt={activeLevel.title}
                       className="w-full h-full object-cover"
                     />
@@ -108,6 +108,7 @@ export default function AcademicsOverview({ setActivePage }) {
                       {activeLevel.id === 'pre-primary' ? '5 Pre-Primary Educators' : '8 Primary & Upper Primary Teachers'}
                     </div>
                   </div>
+
 
                   <div className="space-y-2">
                     <h5 className="font-bold text-slate-900 text-sm flex items-center gap-1.5">

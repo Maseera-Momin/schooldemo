@@ -18,7 +18,7 @@ export default function AboutSection({ setActivePage }) {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-amber-100 bg-white">
               <img
-                src="/src/assets/images/hero_campus.jpg"
+                src="/images/hero_campus.jpg"
                 alt="Shri Dattabal Vidyamandir Campus"
                 className="w-full h-[460px] object-cover hover:scale-105 transition-transform duration-700"
               />
@@ -28,7 +28,7 @@ export default function AboutSection({ setActivePage }) {
               <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-5 rounded-2xl border border-white/60 text-slate-900 shadow-xl flex items-center gap-4">
                 <div className="w-16 h-16 rounded-full border-2 border-amber-500 overflow-hidden bg-white shrink-0 shadow-md">
                   <img
-                    src="/src/assets/images/dattabal_logo.png"
+                    src="/images/dattabal_logo.png"
                     alt="Shri Dattabal Mission Divine"
                     className="w-full h-full object-cover"
                   />
@@ -43,6 +43,7 @@ export default function AboutSection({ setActivePage }) {
                 </div>
               </div>
             </div>
+
             {/* Decorative background box */}
             <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-amber-100/60 rounded-3xl -z-10 hidden sm:block" />
           </motion.div>
