@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Lenis from 'lenis';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -65,7 +68,11 @@ export default function App() {
       <div className="flex-grow">{renderPage()}</div>
       <Footer setActivePage={setActivePage} />
       <MobileBottomNav activePage={activePage} setActivePage={setActivePage} />
+      {/* Vercel Performance & Insights Components */}
+      <Analytics />
+      <SpeedInsights />
     </div>
   );
 }
+
 
