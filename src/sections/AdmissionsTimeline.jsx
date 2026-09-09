@@ -21,7 +21,7 @@ export default function AdmissionsTimeline({ setActivePage }) {
             ADMISSIONS 2026–27
           </span>
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900">
-            Admissions for Pre-Primary & Grades 1 to 7
+            Admissions Open from Nursery to Grade 10
           </h2>
           <p className="text-sm sm:text-base text-slate-600">
             Our admission process is transparent, student-friendly, and open for the upcoming academic session starting in April.

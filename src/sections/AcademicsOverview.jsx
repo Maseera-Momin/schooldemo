@@ -16,10 +16,10 @@ export default function AcademicsOverview({ setActivePage }) {
             ACADEMIC DIVISIONS
           </span>
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900">
-            Foundations of Wisdom from Pre-Primary to Grade 7
+            Foundations of Wisdom from Nursery to Grade 10
           </h2>
           <p className="text-sm sm:text-base text-slate-600">
-            Following the Maharashtra State Curriculum framework, our curriculum nurtures conceptual clarity, mathematical confidence, and creative expression.
+            Following the Maharashtra State Curriculum framework, our curriculum nurtures conceptual clarity, mathematical confidence, and board exam excellence.
           </p>
         </div>
 
@@ -30,13 +30,13 @@ export default function AcademicsOverview({ setActivePage }) {
               <button
                 key={level.id}
                 onClick={() => setSelectedTab(level.id)}
-                className={`px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all cursor-pointer ${
+                className={`px-4 py-2 sm:px-5 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all cursor-pointer ${
                   selectedTab === level.id
                     ? 'bg-[#04439c] text-white shadow-md'
                     : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60'
                 }`}
               >
-                {level.id === 'pre-primary' ? 'Pre-Primary (Nursery / KG)' : level.id === 'primary' ? 'Primary School (Grades 1–4)' : 'Upper Primary (Grades 5–7)'}
+                {level.title.split(' (')[0]}
               </button>
             ))}
           </div>

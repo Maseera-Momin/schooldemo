@@ -16,7 +16,7 @@ export default function AdmissionsPage({ setActivePage }) {
             Admissions & Enrollment
           </h1>
           <p className="text-blue-100 max-w-2xl text-sm sm:text-base">
-            Applications now open for Pre-Primary (Nursery/Kindergarten) and Grades 1 to 7 for the academic session starting in April.
+            Applications now open from Nursery to Grade 10 for the academic session starting in April.
           </p>
         </div>
       </div>

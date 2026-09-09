@@ -6,7 +6,7 @@ export const schoolDetails = {
   management: "Private Aided",
   schoolType: "Co-educational",
   medium: "Marathi Medium",
-  grades: "Pre-Primary to Grade 7",
+  grades: "Nursery to Grade 10",
   academicSession: "Starts in April",
   headTeacher: "SAWANT JAYSHREE TANAJI",
   address: "Shri Dattabal Vidyamandir, Urban Area, Kolhapur Block, Kolhapur District, Maharashtra - 416012",
@@ -26,7 +26,7 @@ export const quickInfoItems = [
   {
     title: "Admissions 2026–27",
     subtitle: "Applications Open",
-    description: "Accepting admissions for Pre-Primary (Nursery/Kindergarten) and Grades 1 to 7.",
+    description: "Accepting admissions from Nursery to Grade 10 (Pre-Primary, Primary, Upper Primary & Secondary).",
     actionText: "Apply Now",
     actionLink: "admissions",
     badge: "Open"
@@ -120,6 +120,14 @@ export const academicLevels = [
     description: "Upper primary students dive deeper into science experiments, social sciences, secondary languages, computer literacy, and scholarship preparation for competitive state exams.",
     subjects: ["Marathi Language & Literature", "English Language", "Hindi (Third Language)", "General Science with Practical Experiments", "Mathematics & Geometry", "History, Civics & Geography", "Computer Literacy Fundamentals"],
     approach: "Inquiry-driven teaching, science project exhibitions, group debates, cultural celebrations, and sports coaching."
+  },
+  {
+    id: "secondary",
+    title: "Secondary School (Grades 8 to 10 - SSC)",
+    subtitle: "Board Preparation, Practical Labs & Career Guidance",
+    description: "Our secondary section prepares students for Maharashtra State Board (SSC 10th Class) exams, advanced mathematics, physics, chemistry, biology, social sciences, and career orientation.",
+    subjects: ["Marathi Literature & Grammar", "English Higher Level", "Hindi / Sanskrit", "Mathematics (Algebra & Geometry)", "Science & Technology (Physics, Chemistry, Biology)", "Social Sciences (History, Geography, Political Science)", "Computer Science & IT"],
+    approach: "Rigorous board exam preparation, mock tests, career counseling, practical lab experiments, and competitive scholarship guidance."
   }
 ];
 
@@ -202,6 +210,138 @@ export const facilitiesList = [
 ];
 
 export const instagramReelsList = [
+  {
+    id: "reel-v1",
+    title: "Morning Assembly & Campus Prayers",
+    category: "School Life",
+    url: "/videos/VID20260908152827.mp4",
+    videoUrl: "/videos/VID20260908152827.mp4",
+    isLocal: true,
+    type: "video",
+    date: "Campus Video",
+    description: "Daily morning assembly, patriotic songs, and moral thoughts with students and faculty.",
+    thumbnail: "/images/shree dattabal_/IMG20260908152720.jpg"
+  },
+  {
+    id: "reel-v2",
+    title: "Interactive Classroom & Foundational Learning",
+    category: "Classroom",
+    url: "/videos/VID20260908153955.mp4",
+    videoUrl: "/videos/VID20260908153955.mp4",
+    isLocal: true,
+    type: "video",
+    date: "Campus Video",
+    description: "Engaging classroom instruction, blackboards, and student group participation.",
+    thumbnail: "/images/shree dattabal_/IMG20260908153450.jpg"
+  },
+  {
+    id: "reel-v3",
+    title: "Primary Academic Activity & Craft Displays",
+    category: "Classroom",
+    url: "/videos/VID20260908154002.mp4",
+    videoUrl: "/videos/VID20260908154002.mp4",
+    isLocal: true,
+    type: "video",
+    date: "Campus Video",
+    description: "Hands-on model creation and craft learning under teacher guidance.",
+    thumbnail: "/images/shree dattabal_/IMG20260908153606.jpg"
+  },
+  {
+    id: "reel-v4",
+    title: "Science & Computer Lab Demonstration",
+    category: "Academics & Honors",
+    url: "/videos/VID20260908154109.mp4",
+    videoUrl: "/videos/VID20260908154109.mp4",
+    isLocal: true,
+    type: "video",
+    date: "Campus Video",
+    description: "Students exploring digital tools and foundational IT concepts in the computer lab.",
+    thumbnail: "/images/shree dattabal_/IMG20260908153642.jpg"
+  },
+  {
+    id: "reel-v5",
+    title: "Lezim Drills & Physical Training",
+    category: "Sports & Drill",
+    url: "/videos/VID20260908154152.mp4",
+    videoUrl: "/videos/VID20260908154152.mp4",
+    isLocal: true,
+    type: "video",
+    date: "Campus Video",
+    description: "Traditional Maharashtrian Lezim performance and disciplined playground drills.",
+    thumbnail: "/images/shree dattabal_/IMG20260908154011.jpg"
+  },
+  {
+    id: "reel-v6",
+    title: "Annual Cultural Gathering & Dance Showcase",
+    category: "Cultural Events",
+    url: "/videos/VID20260908154626.mp4",
+    videoUrl: "/videos/VID20260908154626.mp4",
+    isLocal: true,
+    type: "video",
+    date: "Campus Video",
+    description: "Stage dance, drama, and festive celebrations by Shri Dattabal students.",
+    thumbnail: "/images/shree dattabal_/IMG20260908154617.jpg"
+  },
+  {
+    id: "reel-v7",
+    title: "Annual Sports Meet & Running Races",
+    category: "Sports & Drill",
+    url: "/videos/VID20260908155151.mp4",
+    videoUrl: "/videos/VID20260908155151.mp4",
+    isLocal: true,
+    type: "video",
+    date: "Campus Video",
+    description: "Exciting track and field events and sportsmanship on the school grounds.",
+    thumbnail: "/images/shree dattabal_/IMG20260908154934.jpg"
+  },
+  {
+    id: "reel-v8",
+    title: "Student Martial Arts & Yoga Practice",
+    category: "Sports & Drill",
+    url: "/videos/VID20260908155254.mp4",
+    videoUrl: "/videos/VID20260908155254.mp4",
+    isLocal: true,
+    type: "video",
+    date: "Campus Video",
+    description: "Yoga postures, flexibility exercises, and physical wellness routines.",
+    thumbnail: "/images/shree dattabal_/IMG20260908154936.jpg"
+  },
+  {
+    id: "reel-v9",
+    title: "Tree-Lined Courtyard & Playground Tour",
+    category: "School Life",
+    url: "/videos/VID20260908160324.mp4",
+    videoUrl: "/videos/VID20260908160324.mp4",
+    isLocal: true,
+    type: "video",
+    date: "Campus Video",
+    description: "Scenic view of the green campus courtyard and play areas.",
+    thumbnail: "/images/shree dattabal_/IMG20260908160121.jpg"
+  },
+  {
+    id: "reel-v10",
+    title: "Art & Drawing Exhibition Highlights",
+    category: "Traditions & Values",
+    url: "/videos/VID20260908160335.mp4",
+    videoUrl: "/videos/VID20260908160335.mp4",
+    isLocal: true,
+    type: "video",
+    date: "Campus Video",
+    description: "Exhibition of student paintings, sketches, and cultural artwork.",
+    thumbnail: "/images/shree dattabal_/IMG20260908160137.jpg"
+  },
+  {
+    id: "reel-v11",
+    title: "Guru Purnima & Festival Gathering",
+    category: "Traditions & Values",
+    url: "/videos/VID20260908160350.mp4",
+    videoUrl: "/videos/VID20260908160350.mp4",
+    isLocal: true,
+    type: "video",
+    date: "Campus Video",
+    description: "Traditional festival rituals, teacher blessings, and value education sessions.",
+    thumbnail: "/images/shree dattabal_/IMG20260908160316.jpg"
+  },
   {
     id: "reel-1",
     title: "Annual Gathering & Cultural Celebration",

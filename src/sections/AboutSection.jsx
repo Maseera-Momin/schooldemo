@@ -66,7 +66,7 @@ export default function AboutSection({ setActivePage }) {
             </h2>
 
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              <strong>SHRI DATTABAL VIDYAMANDIR</strong> was established in <strong>1989</strong> and is managed as a <strong>Private Aided</strong> institution under <strong>Shri Dattabal Mission Divine Kolhapur</strong>. Situated in the urban area of Kolhapur block in Kolhapur district, Maharashtra, our school is approachable by all-weather roads and provides a nurturing, disciplined environment for children from <strong>Pre-Primary through Grade 7</strong>.
+              <strong>SHRI DATTABAL VIDYAMANDIR</strong> was established in <strong>1989</strong> and is managed as a <strong>Private Aided</strong> institution under <strong>Shri Dattabal Mission Divine Kolhapur</strong>. Situated in the urban area of Kolhapur block in Kolhapur district, Maharashtra, our school is approachable by all-weather roads and provides a nurturing, disciplined environment for children from <strong>Nursery through Grade 10</strong>.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">

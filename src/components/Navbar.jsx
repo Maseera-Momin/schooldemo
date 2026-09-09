@@ -30,43 +30,6 @@ export default function Navbar({ activePage, setActivePage }) {
 
   return (
     <header className="sticky top-0 z-50 w-full transition-all duration-300">
-      {/* Top Utility Bar */}
-      <div className="bg-[#022c6b] text-white text-xs py-1.5 px-3 sm:px-4 border-b border-white/10">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="hidden md:flex items-center space-x-6 text-slate-300">
-            <a href="tel:+912312654890" className="flex items-center gap-1.5 hover:text-white transition-colors">
-              <Phone className="w-3.5 h-3.5 text-blue-300" /> +91 231 265 4890
-            </a>
-            <a href="mailto:dattabalvidyamandir.kop@gmail.com" className="flex items-center gap-1.5 hover:text-white transition-colors">
-              <Mail className="w-3.5 h-3.5 text-blue-300" /> dattabalvidyamandir.kop@gmail.com
-            </a>
-            <span className="text-[#a8d4ff] font-medium hidden lg:inline">Kolhapur Block, Kolhapur (Maharashtra)</span>
-          </div>
-
-          <div className="flex items-center justify-between md:justify-end w-full md:w-auto space-x-3 sm:space-x-6">
-            <div className="flex items-center space-x-3 sm:space-x-5 text-[11px] sm:text-xs">
-              {utilityNavLinks.map((item, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => handleNavClick(item.link)}
-                  className="hover:text-blue-200 transition-colors font-medium cursor-pointer"
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-
-            <button
-              onClick={() => setSearchOpen(!searchOpen)}
-              className="p-1 hover:text-blue-200 transition-colors text-white cursor-pointer flex items-center gap-1 text-[11px]"
-              aria-label="Search site"
-            >
-              <Search className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-              <span className="hidden sm:inline">Search</span>
-            </button>
-          </div>
-        </div>
-      </div>
 
       {/* Main Navbar */}
       <nav
@@ -125,13 +88,14 @@ export default function Navbar({ activePage, setActivePage }) {
             })}
           </div>
 
-          {/* Far Right: Red CTA Button & Mobile Toggle */}
+          {/* Far Right: Apply for Admission CTA Button & Mobile Toggle */}
           <div className="flex items-center space-x-2 sm:space-x-3 shrink-0">
             <button
               onClick={() => handleNavClick('admissions')}
-              className="inline-flex items-center justify-center px-3.5 py-1.5 sm:px-5 sm:py-2.5 rounded-full bg-[#be185d] hover:bg-[#9d174d] text-white font-bold text-[11px] sm:text-xs tracking-wider uppercase shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer whitespace-nowrap border border-pink-400/30"
+              className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 sm:px-4 md:px-5 sm:py-2.5 rounded-full bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-700 hover:to-rose-700 text-white font-bold text-[10px] sm:text-xs tracking-wider uppercase shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 active:scale-95 cursor-pointer whitespace-nowrap border border-pink-400/30"
             >
-              <span className="hidden xs:inline">Apply </span>2026–27
+              <GraduationCap className="w-3.5 h-3.5 shrink-0" />
+              <span>Apply for Admission</span>
             </button>
 
             <button
@@ -190,10 +154,10 @@ export default function Navbar({ activePage, setActivePage }) {
               <div className="grid grid-cols-2 gap-2 pb-2">
                 <button
                   onClick={() => handleNavClick('admissions')}
-                  className="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#be185d] text-white font-bold text-xs shadow-md"
+                  className="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-gradient-to-r from-pink-600 to-rose-600 text-white font-bold text-xs shadow-md"
                 >
                   <GraduationCap className="w-4 h-4" />
-                  <span>Apply Now</span>
+                  <span>Apply for Admission</span>
                 </button>
                 <a
                   href="tel:+912312654890"

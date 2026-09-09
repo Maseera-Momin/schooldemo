@@ -6,7 +6,6 @@ import { SpeedInsights } from '@vercel/speed-insights/react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import MobileBottomNav from './components/MobileBottomNav';
 
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
@@ -62,12 +61,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-900 flex flex-col justify-between selection:bg-[#be185d] selection:text-white pb-14 md:pb-0">
+    <div className="min-h-screen bg-[#f8fafc] text-slate-900 flex flex-col justify-between selection:bg-[#be185d] selection:text-white">
       <ScrollToTop activePage={activePage} />
       <Navbar activePage={activePage} setActivePage={setActivePage} />
       <div className="flex-grow">{renderPage()}</div>
       <Footer setActivePage={setActivePage} />
-      <MobileBottomNav activePage={activePage} setActivePage={setActivePage} />
       {/* Vercel Performance & Insights Components */}
       <Analytics />
       <SpeedInsights />

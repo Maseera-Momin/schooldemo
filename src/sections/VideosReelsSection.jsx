@@ -83,27 +83,33 @@ export default function VideosReelsSection({ setActivePage }) {
 
         {/* Reels Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6">
-          {filteredReels.map((item, idx) => (
-            <motion.div
+          {filteredReels.map((item) => (
+            <div
               key={item.id}
-              layout
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              transition={{ duration: 0.4, delay: idx * 0.05 }}
-              className="group relative rounded-2xl overflow-hidden bg-slate-800/90 border border-slate-700/70 shadow-xl hover:shadow-2xl hover:border-pink-500/50 transition-all duration-300 flex flex-col justify-between"
+              className="group relative rounded-2xl overflow-hidden bg-slate-800/90 border border-slate-700/70 shadow-xl hover:shadow-2xl hover:border-pink-500/50 transition-all duration-300 flex flex-col justify-between transform-gpu"
             >
               {embedMode ? (
-                /* Embedded Playable Instagram Frame Container */
+                /* Embedded Playable Instagram Frame Container or HTML5 Video */
                 <div className="relative w-full aspect-[9/16] max-h-[460px] bg-black overflow-hidden flex items-center justify-center">
-                  <iframe
-                    src={item.embedUrl}
-                    title={item.title}
-                    className="w-full h-full border-0"
-                    allowFullScreen
-                    scrolling="no"
-                    loading="lazy"
-                  />
+                  {item.isLocal || item.videoUrl ? (
+                    <video
+                      src={item.videoUrl || item.url}
+                      poster={item.thumbnail}
+                      controls
+                      playsInline
+                      preload="none"
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <iframe
+                      src={item.embedUrl}
+                      title={item.title}
+                      className="w-full h-full border-0"
+                      allowFullScreen
+                      scrolling="no"
+                      loading="lazy"
+                    />
+                  )}
                 </div>
               ) : (
                 /* Card Preview with Play Trigger */
@@ -176,7 +182,7 @@ export default function VideosReelsSection({ setActivePage }) {
                   </a>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -244,15 +250,26 @@ export default function VideosReelsSection({ setActivePage }) {
                 </button>
               </div>
 
-              {/* Embedded Player in Modal */}
+              {/* Embedded Player or HTML5 Video in Modal */}
               <div className="relative aspect-[9/16] max-h-[480px] w-full bg-black flex items-center justify-center overflow-hidden">
-                <iframe
-                  src={selectedVideo.embedUrl}
-                  title={selectedVideo.title}
-                  className="w-full h-full border-0"
-                  allowFullScreen
-                  scrolling="no"
-                />
+                {selectedVideo.isLocal || selectedVideo.videoUrl ? (
+                  <video
+                    src={selectedVideo.videoUrl || selectedVideo.url}
+                    poster={selectedVideo.thumbnail}
+                    controls
+                    autoPlay
+                    playsInline
+                    className="w-full h-full object-contain"
+                  />
+                ) : (
+                  <iframe
+                    src={selectedVideo.embedUrl}
+                    title={selectedVideo.title}
+                    className="w-full h-full border-0"
+                    allowFullScreen
+                    scrolling="no"
+                  />
+                )}
               </div>
 
               {/* Modal Footer */}

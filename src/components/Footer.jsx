@@ -38,7 +38,7 @@ export default function Footer({ setActivePage }) {
             </div>
           </div>
           <p className="text-xs text-slate-400 leading-relaxed">
-            Established in 1989 under the auspices of <strong>Shri Dattabal Mission Divine Kolhapur</strong>. A Private Aided Co-educational institution providing quality foundational education from Pre-Primary to Grade 7.
+            Established in 1989 under the auspices of <strong>Shri Dattabal Mission Divine Kolhapur</strong>. A Private Aided Co-educational institution providing quality foundational education from Nursery to Grade 10.
           </p>
           <div className="flex space-x-3 pt-1">
             <a
@@ -79,7 +79,7 @@ export default function Footer({ setActivePage }) {
           </h4>
           <ul className="space-y-2.5 text-xs">
             <li><button onClick={() => handleNav('about')} className="hover:text-white transition-colors cursor-pointer text-left py-0.5">About Shri Dattabal Vidyamandir</button></li>
-            <li><button onClick={() => handleNav('academics')} className="hover:text-white transition-colors cursor-pointer text-left py-0.5">Academics (Pre-Primary to Grade 7)</button></li>
+            <li><button onClick={() => handleNav('academics')} className="hover:text-white transition-colors cursor-pointer text-left py-0.5">Academics (Nursery to Grade 10)</button></li>
             <li><button onClick={() => handleNav('admissions')} className="hover:text-white transition-colors cursor-pointer text-left py-0.5">Admissions 2026–27 (Enrollment)</button></li>
             <li><button onClick={() => handleNav('facilities')} className="hover:text-white transition-colors cursor-pointer text-left py-0.5">19 Classrooms & 1,373-Book Library</button></li>
             <li><button onClick={() => handleNav('faculty')} className="hover:text-white transition-colors cursor-pointer text-left py-0.5">Head Teacher & Faculty (14 Teachers)</button></li>
