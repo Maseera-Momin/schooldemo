@@ -5,7 +5,8 @@ export const schoolDetails = {
   established: 1989,
   management: "Private Aided",
   schoolType: "Co-educational",
-  medium: "Marathi Medium",
+  medium: "English Medium & Semi-English Medium",
+  wings: ["English Medium (Nursery - 10th)", "Semi-English Medium (1st - 10th)"],
   grades: "Nursery to Grade 10",
   academicSession: "Starts in April",
   headTeacher: "SAWANT JAYSHREE TANAJI",
@@ -22,22 +23,79 @@ export const schoolDetails = {
   }
 };
 
+export const mediumStreams = [
+  {
+    id: "english",
+    title: "English Medium Wing",
+    subtitle: "Complete English Immersion & Modern Pedagogy",
+    grades: "Nursery to Grade 10",
+    badge: "100% English Instruction",
+    accentColor: "#04439c",
+    tagColor: "bg-blue-600 text-white",
+    description:
+      "A comprehensive English immersion curriculum adhering to Maharashtra State Board guidelines. All core academic subjects—Mathematics, General Science, Social Sciences, and Computer Studies—are taught in English, fostering fluent communication, analytical reasoning, and global readiness.",
+    highlights: [
+      "100% English instructional environment across all core academic disciplines",
+      "Strong phonics, reading fluency, and creative writing programs from Pre-Primary",
+      "Interactive science demonstrations, computer literacy, and mathematical logic",
+      "Continuous assessment with emphasis on elocution, debate, and spoken clarity",
+      "Prepares students for state and national level competitive talent exams"
+    ],
+    subjectBreakdown: [
+      { subject: "Mathematics (Algebra & Geometry)", medium: "English", status: "Primary" },
+      { subject: "General Science (Physics, Chem, Bio)", medium: "English", status: "Primary" },
+      { subject: "Social Sciences (History, Geography, Civics)", medium: "English", status: "Primary" },
+      { subject: "English Language & Literature", medium: "English", status: "First Language" },
+      { subject: "Marathi & Hindi Languages", medium: "Marathi & Hindi", status: "Second & Third Language" },
+      { subject: "Computer Science & ICT", medium: "English", status: "Digital Literacy" }
+    ],
+    idealFor: "Students seeking holistic English fluency for future careers in engineering, medical, computer science, and international academia."
+  },
+  {
+    id: "semi-english",
+    title: "Semi-English Medium Wing",
+    subtitle: "Bilingual Technical Edge & State Board Mastery",
+    grades: "Grade 1 to Grade 10",
+    badge: "Science & Math in English",
+    accentColor: "#0d9488",
+    tagColor: "bg-emerald-600 text-white",
+    description:
+      "The premier bilingual model recognized by the Maharashtra State Education Department. Science and Mathematics are taught in English to build essential technical and STEM terminology, while Social Sciences and Humanities are taught in Marathi for natural, deep conceptual comprehension.",
+    highlights: [
+      "Mathematics & Science taught in English for high school & college technical readiness",
+      "Social Sciences (History & Geography) taught in Marathi for superior retention and clarity",
+      "Zero linguistic strain—smooth transition for students from regional language backgrounds",
+      "Consistently high pass percentages and board merit achievements in Maharashtra SSC Exams",
+      "Balanced moral, cultural, and scientific education rooted in traditional values"
+    ],
+    subjectBreakdown: [
+      { subject: "Mathematics (Algebra & Geometry)", medium: "English", status: "Primary (English)" },
+      { subject: "General Science (Physics, Chem, Bio)", medium: "English", status: "Primary (English)" },
+      { subject: "Social Sciences (History, Geography, Civics)", medium: "Marathi", status: "Concept-First (Marathi)" },
+      { subject: "English Language", medium: "English", status: "Standard / Higher Level" },
+      { subject: "Marathi & Hindi Languages", medium: "Marathi & Hindi", status: "First & Third Language" },
+      { subject: "Computer Science & ICT", medium: "English / Bilingual", status: "Digital Literacy" }
+    ],
+    idealFor: "Students who want strong analytical fluency in English for Science & Math while enjoying effortless comprehension and top board exam scores through bilingual learning."
+  }
+];
+
 export const quickInfoItems = [
   {
     title: "Admissions 2026–27",
-    subtitle: "Applications Open",
-    description: "Accepting admissions from Nursery to Grade 10 (Pre-Primary, Primary, Upper Primary & Secondary).",
+    subtitle: "English & Semi-English",
+    description: "Accepting admissions from Nursery to Grade 10 across both English Medium and Semi-English Medium wings.",
     actionText: "Apply Now",
     actionLink: "admissions",
     badge: "Open"
   },
   {
-    title: "Academic Session",
-    subtitle: "Starts in April",
-    description: "Holistic Maharashtra State Board Marathi medium curriculum with strong English & Maths foundation.",
-    actionText: "View Curriculum",
+    title: "Dual-Medium Wings",
+    subtitle: "English & Semi-English",
+    description: "Choose between 100% English Medium or bilingual Semi-English (Science & Math in English) curriculum.",
+    actionText: "Compare Wings",
     actionLink: "academics",
-    badge: "Active"
+    badge: "Dual Wing"
   },
   {
     title: "School Hours",
@@ -170,42 +228,42 @@ export const facilitiesList = [
     title: "19 Spacious Instructional Classrooms",
     category: "Academic Infrastructure",
     description: "19 well-lit, ventilated classrooms in excellent condition, equipped with green boards, comfortable benches, and educational charts.",
-    image: "/images/classroom.jpg"
+    image: null
   },
   {
     id: "library",
     title: "1,373+ Books Enriched Library",
     category: "Knowledge Center",
     description: "An expansive library holding 1,373+ titles including regional literature, biographies of national leaders and scientists, science encyclopedias, and reference books.",
-    image: "/images/library.jpg"
+    image: null
   },
   {
     id: "computers",
     title: "5-System Computer Learning Unit",
     category: "Digital Education",
     description: "Dedicated computers for students to learn basic computing, digital typing, educational applications, Paint, and software tools.",
-    image: "/images/computer_lab.jpg"
+    image: null
   },
   {
     id: "playground",
     title: "Expansive Sports Playground",
     category: "Athletics & Physical Training",
     description: "Open school playground dedicated to daily morning assemblies, drill routines, Kho-Kho, Kabaddi, running races, and annual sports day competitions.",
-    image: "/images/sports_ground.jpg"
+    image: null
   },
   {
     id: "hygiene",
     title: "22 Modern Toilets & Clean Tap Water",
     category: "Health & Sanitation",
     description: "12 fully functional boys' toilets and 10 girls' toilets, coupled with continuous municipal tap water supply and drinking water stations.",
-    image: "/images/hero_campus.jpg"
+    image: null
   },
   {
     id: "campus-security",
     title: "Secure Private Building & Pucca Wall",
     category: "Campus Safety",
     description: "Gated private school premises with a sturdy Pucca boundary wall, all-weather road connectivity, and dedicated Head Master and staff administration office.",
-    image: "/images/hero_campus.jpg"
+    image: null
   }
 ];
 
@@ -220,7 +278,7 @@ export const instagramReelsList = [
     type: "video",
     date: "Campus Video",
     description: "Daily morning assembly, patriotic songs, and moral thoughts with students and faculty.",
-    thumbnail: "/images/shree dattabal_/IMG20260908152720.jpg"
+    thumbnail: null
   },
   {
     id: "reel-v2",
@@ -232,7 +290,7 @@ export const instagramReelsList = [
     type: "video",
     date: "Campus Video",
     description: "Engaging classroom instruction, blackboards, and student group participation.",
-    thumbnail: "/images/shree dattabal_/IMG20260908153450.jpg"
+    thumbnail: null
   },
   {
     id: "reel-v3",
@@ -244,7 +302,7 @@ export const instagramReelsList = [
     type: "video",
     date: "Campus Video",
     description: "Hands-on model creation and craft learning under teacher guidance.",
-    thumbnail: "/images/shree dattabal_/IMG20260908153606.jpg"
+    thumbnail: null
   },
   {
     id: "reel-v4",
@@ -256,7 +314,7 @@ export const instagramReelsList = [
     type: "video",
     date: "Campus Video",
     description: "Students exploring digital tools and foundational IT concepts in the computer lab.",
-    thumbnail: "/images/shree dattabal_/IMG20260908153642.jpg"
+    thumbnail: null
   },
   {
     id: "reel-v5",
@@ -268,7 +326,7 @@ export const instagramReelsList = [
     type: "video",
     date: "Campus Video",
     description: "Traditional Maharashtrian Lezim performance and disciplined playground drills.",
-    thumbnail: "/images/shree dattabal_/IMG20260908154011.jpg"
+    thumbnail: null
   },
   {
     id: "reel-v6",
@@ -280,7 +338,7 @@ export const instagramReelsList = [
     type: "video",
     date: "Campus Video",
     description: "Stage dance, drama, and festive celebrations by Shri Dattabal students.",
-    thumbnail: "/images/shree dattabal_/IMG20260908154617.jpg"
+    thumbnail: null
   },
   {
     id: "reel-v7",
@@ -292,7 +350,7 @@ export const instagramReelsList = [
     type: "video",
     date: "Campus Video",
     description: "Exciting track and field events and sportsmanship on the school grounds.",
-    thumbnail: "/images/shree dattabal_/IMG20260908154934.jpg"
+    thumbnail: null
   },
   {
     id: "reel-v8",
@@ -304,7 +362,7 @@ export const instagramReelsList = [
     type: "video",
     date: "Campus Video",
     description: "Yoga postures, flexibility exercises, and physical wellness routines.",
-    thumbnail: "/images/shree dattabal_/IMG20260908154936.jpg"
+    thumbnail: null
   },
   {
     id: "reel-v9",
@@ -316,7 +374,7 @@ export const instagramReelsList = [
     type: "video",
     date: "Campus Video",
     description: "Scenic view of the green campus courtyard and play areas.",
-    thumbnail: "/images/shree dattabal_/IMG20260908160121.jpg"
+    thumbnail: null
   },
   {
     id: "reel-v10",
@@ -328,7 +386,7 @@ export const instagramReelsList = [
     type: "video",
     date: "Campus Video",
     description: "Exhibition of student paintings, sketches, and cultural artwork.",
-    thumbnail: "/images/shree dattabal_/IMG20260908160137.jpg"
+    thumbnail: null
   },
   {
     id: "reel-v11",
@@ -340,7 +398,7 @@ export const instagramReelsList = [
     type: "video",
     date: "Campus Video",
     description: "Traditional festival rituals, teacher blessings, and value education sessions.",
-    thumbnail: "/images/shree dattabal_/IMG20260908160316.jpg"
+    thumbnail: null
   },
   {
     id: "reel-1",
@@ -352,7 +410,7 @@ export const instagramReelsList = [
     type: "reel",
     date: "Annual Cultural Fest",
     description: "Vibrant traditional dance performances, folk arts, and student drama showcases by our students during the Annual Gathering.",
-    thumbnail: "/images/cultural_gathering.jpg"
+    thumbnail: null
   },
   {
     id: "reel-2",
@@ -364,7 +422,7 @@ export const instagramReelsList = [
     type: "post",
     date: "School Highlights",
     description: "Felicitation of meritorious students, creative project displays, and teacher-guided academic milestones at Shri Dattabal Vidyamandir.",
-    thumbnail: "/images/classroom.jpg"
+    thumbnail: null
   },
   {
     id: "reel-3",
@@ -376,7 +434,7 @@ export const instagramReelsList = [
     type: "reel",
     date: "Daily Routine",
     description: "Inspiring morning assembly with recitation, national anthem, news reading, and moral thought of the day.",
-    thumbnail: "/images/hero_campus.jpg"
+    thumbnail: null
   },
   {
     id: "reel-4",
@@ -388,7 +446,7 @@ export const instagramReelsList = [
     type: "reel",
     date: "Sports Ground",
     description: "Energetic Lezim presentations, rhythmic drill exercises, and sports training on the school ground.",
-    thumbnail: "/images/sports_ground.jpg"
+    thumbnail: null
   },
   {
     id: "reel-5",
@@ -400,7 +458,7 @@ export const instagramReelsList = [
     type: "reel",
     date: "Activity Day",
     description: "Hands-on model making, clay modeling, drawing, and active constructivist learning in primary classrooms.",
-    thumbnail: "/images/computer_lab.jpg"
+    thumbnail: null
   },
   {
     id: "reel-6",
@@ -412,7 +470,7 @@ export const instagramReelsList = [
     type: "reel",
     date: "Festival Celebration",
     description: "Celebration of Guru Purnima, Shiv Jayanti, national festivals, and moral values guided by Shri Dattabal Divine Mission Kolhapur.",
-    thumbnail: "/images/cultural_gathering.jpg"
+    thumbnail: null
   },
   {
     id: "reel-7",
@@ -424,7 +482,7 @@ export const instagramReelsList = [
     type: "reel",
     date: "Special Events",
     description: "Inspiring elocution, poetry recitation, and student talent exhibitions encouraging confident public speaking.",
-    thumbnail: "/images/library.jpg"
+    thumbnail: null
   }
 ];
 
@@ -454,7 +512,7 @@ export const eventsList = [
     time: "8:00 AM – 1:00 PM",
     location: "Main Assembly Ground",
     description: "Welcome of new students, distribution of textbooks, and traditional Saraswati Poojan to mark the new school session starting in April.",
-    image: "/images/hero_campus.jpg"
+    image: null
   },
   {
     id: "event-2",
@@ -466,7 +524,7 @@ export const eventsList = [
     time: "7:30 AM – 10:30 AM",
     location: "School Playground",
     description: "Flag hoisting by dignitaries, student march-past parade, patriotic singing, and prize distribution for scholarship achievers.",
-    image: "/images/sports_ground.jpg"
+    image: null
   },
   {
     id: "event-3",
@@ -478,7 +536,7 @@ export const eventsList = [
     time: "9:00 AM – 1:00 PM",
     location: "Auditorium Hall",
     description: "Upper primary students take on the role of teachers for the day, honoring our dedicated educators and Head Teacher Sawant Jayshree Tanaji.",
-    image: "/images/principal.jpg"
+    image: null
   },
   {
     id: "event-4",
@@ -490,7 +548,7 @@ export const eventsList = [
     time: "9:00 AM – 5:00 PM",
     location: "Main Stage & Sports Ground",
     description: "Grand annual day featuring traditional folk dances, Lezim performances, drama, elocution, running races, and community felicitation.",
-    image: "/images/cultural_gathering.jpg"
+    image: null
   }
 ];
 
@@ -547,12 +605,12 @@ export const achievementStats = [
 ];
 
 export const galleryItems = [
-  { id: 1, title: "Main School Building & Entrance Gate", category: "Campus", image: "/images/hero_campus.jpg" },
-  { id: 2, title: "School Library (1,373+ Books)", category: "Classrooms", image: "/images/library.jpg" },
-  { id: 3, title: "5-System Computer Learning Unit", category: "Classrooms", image: "/images/computer_lab.jpg" },
-  { id: 4, title: "Head Teacher & Faculty Administration", category: "Events", image: "/images/principal.jpg" },
-  { id: 5, title: "Sports Playground & Lezim Drills", category: "Sports", image: "/images/sports_ground.jpg" },
-  { id: 6, title: "Annual Gathering & Cultural Showcase", category: "Cultural", image: "/images/cultural_gathering.jpg" }
+  { id: 1, title: "Main School Building & Entrance Gate", category: "Campus", image: null },
+  { id: 2, title: "School Library (1,373+ Books)", category: "Classrooms", image: null },
+  { id: 3, title: "5-System Computer Learning Unit", category: "Classrooms", image: null },
+  { id: 4, title: "Head Teacher & Faculty Administration", category: "Events", image: null },
+  { id: 5, title: "Sports Playground & Lezim Drills", category: "Sports", image: null },
+  { id: 6, title: "Annual Gathering & Cultural Showcase", category: "Cultural", image: null }
 ];
 
 export const facultyList = [
@@ -563,7 +621,7 @@ export const facultyList = [
     department: "School Administration & Academics",
     degree: "B.A., B.Ed., D.T.Ed.",
     bio: "Guiding Shri Dattabal Vidyamandir with visionary leadership, academic discipline, and a deep dedication to student character building and academic excellence.",
-    image: "/images/principal.jpg"
+    image: null
   },
   {
     id: "fac-2",
@@ -572,7 +630,7 @@ export const facultyList = [
     department: "Languages, Mathematics, Science, Social Studies",
     degree: "D.Ed., B.Ed., M.A. Qualified",
     bio: "Experienced educators delivering student-centric education across Languages, English, Mathematics, General Science, and History-Geography.",
-    image: "/images/classroom.jpg"
+    image: null
   },
   {
     id: "fac-3",
@@ -581,7 +639,7 @@ export const facultyList = [
     department: "Early Childhood Education & Play-Way Learning",
     degree: "Montessori & Early Childhood Care Certified",
     bio: "Compassionate educators who create a joyful, foundational learning environment for nursery, junior KG, and senior KG children.",
-    image: "/images/library.jpg"
+    image: null
   },
   {
     id: "fac-4",
@@ -590,7 +648,7 @@ export const facultyList = [
     department: "Physical Education, Lezim & Creative Arts",
     degree: "B.P.Ed. / Art Certificate",
     bio: "Mentoring children in sportsmanship, Lezim drills, drawing competitions, cultural plays, and moral assemblies.",
-    image: "/images/sports_ground.jpg"
+    image: null
   }
 ];
 

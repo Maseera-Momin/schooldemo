@@ -7,25 +7,30 @@ export default function PrincipalSection() {
     <section className="py-20 bg-white border-y border-slate-200">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="bg-gradient-to-r from-[#021f4a] via-[#043b8c] to-[#011a3d] rounded-3xl overflow-hidden text-white shadow-2xl border border-blue-900 grid grid-cols-1 lg:grid-cols-12">
-          {/* Headmaster Image & Mission Emblem */}
-          <div className="lg:col-span-5 relative bg-slate-900 flex flex-col justify-end">
-            <img
-              src="/images/principal.jpg"
-              alt="Sawant Jayshree Tanaji - Head Teacher"
-              className="w-full h-full object-cover min-h-[380px] lg:min-h-[480px] opacity-95"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#021f4a] via-transparent to-transparent" />
+          {/* Headmaster Card & Mission Emblem */}
+          <div className="lg:col-span-5 relative bg-gradient-to-b from-[#011438] via-[#021f4a] to-[#043b8c] flex flex-col items-center justify-center p-8 text-center min-h-[260px] lg:min-h-[480px] border-b lg:border-b-0 lg:border-r border-blue-900/60">
+            {/* Logo Crest */}
+            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-amber-400 overflow-hidden shadow-2xl bg-white p-1 mb-4">
+              <img
+                src="/images/dattabal_logo.png"
+                alt="Shri Dattabal Mission Divine"
+                className="w-full h-full object-contain rounded-full"
+              />
+            </div>
 
-            {/* Emblem badge over photo */}
-            <div className="absolute top-6 left-6 flex items-center gap-3 bg-black/60 backdrop-blur-md px-3.5 py-2 rounded-full border border-white/20">
-              <div className="w-8 h-8 rounded-full overflow-hidden border border-amber-400">
-                <img
-                  src="/images/dattabal_logo.png"
-                  alt="Shri Dattabal Mission Divine"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <span className="text-xs font-bold text-amber-300">Shri Dattabal Vidyamandir</span>
+            <div className="space-y-1">
+              <span className="inline-block px-3 py-1 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 text-[10px] font-bold uppercase tracking-widest">
+                LEADERSHIP & ADMINISTRATION
+              </span>
+              <h3 className="font-serif font-bold text-lg sm:text-xl text-white">
+                SAWANT JAYSHREE TANAJI
+              </h3>
+              <p className="text-xs text-blue-200 font-semibold">
+                Head Teacher · B.A., B.Ed., D.T.Ed.
+              </p>
+              <p className="text-[11px] text-slate-400">
+                Shri Dattabal Vidyamandir, Kolhapur
+              </p>
             </div>
           </div>
 

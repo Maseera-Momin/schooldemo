@@ -87,7 +87,7 @@ export default function GallerySection({ setActivePage }) {
 
       {/* Lightbox Modal */}
       {selectedImage && (
-        <LightboxModal item={selectedImage} onClose={() => setSelectedImage(null)} />
+        <LightboxModal item={selectedImage} items={filteredItems} onClose={() => setSelectedImage(null)} />
       )}
     </section>
   );

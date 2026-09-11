@@ -21,11 +21,52 @@ export default function AdmissionsTimeline({ setActivePage }) {
             ADMISSIONS 2026–27
           </span>
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900">
-            Admissions Open from Nursery to Grade 10
+            Admissions Open: English & Semi-English Medium
           </h2>
           <p className="text-sm sm:text-base text-slate-600">
-            Our admission process is transparent, student-friendly, and open for the upcoming academic session starting in April.
+            Enrolling for the academic year 2026–2027 across our two dedicated academic wings under the Maharashtra State Board.
           </p>
+        </div>
+
+        {/* Dual Medium Wing Admission Options */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          <div className="bg-white p-6 sm:p-7 rounded-3xl border-2 border-blue-500/30 shadow-md hover:shadow-xl transition-all relative">
+            <div className="flex items-center justify-between mb-3">
+              <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#04439c] text-xs font-bold uppercase tracking-wider">
+                100% English Instruction
+              </span>
+              <span className="text-xs font-mono font-semibold text-slate-500">Nursery to Grade 10</span>
+            </div>
+            <h3 className="text-xl sm:text-2xl font-serif font-bold text-slate-900 mb-2">
+              English Medium Wing
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              Direct entry from Pre-Primary (Nursery, LKG, UKG) through Grade 10. Complete immersion in English for Maths, Science, Social Sciences, and Computer Studies.
+            </p>
+            <div className="text-xs font-semibold text-blue-900 bg-blue-50/70 p-3 rounded-xl border border-blue-100 flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0" />
+              <span>Age Criteria: 3+ years for Nursery as of academic cut-off date.</span>
+            </div>
+          </div>
+
+          <div className="bg-white p-6 sm:p-7 rounded-3xl border-2 border-teal-500/30 shadow-md hover:shadow-xl transition-all relative">
+            <div className="flex items-center justify-between mb-3">
+              <span className="px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-xs font-bold uppercase tracking-wider">
+                Math & Science in English
+              </span>
+              <span className="text-xs font-mono font-semibold text-slate-500">Grade 1 to Grade 10</span>
+            </div>
+            <h3 className="text-xl sm:text-2xl font-serif font-bold text-slate-900 mb-2">
+              Semi-English Medium Wing
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              Enrolling from Grade 1 to Grade 10. Perfect for students seeking English fluency in Science & Math while maintaining effortless concept grasp in Marathi for Social Studies.
+            </p>
+            <div className="text-xs font-semibold text-teal-900 bg-teal-50/70 p-3 rounded-xl border border-teal-100 flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0" />
+              <span>Welcoming transfers from regional / vernacular medium schools.</span>
+            </div>
+          </div>
         </div>
 
         {/* 4-Step Process Timeline */}

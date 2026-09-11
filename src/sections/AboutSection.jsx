@@ -16,31 +16,37 @@ export default function AboutSection({ setActivePage }) {
             transition={{ duration: 0.7 }}
             className="lg:col-span-6 relative"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-amber-100 bg-white">
-              <img
-                src="/images/hero_campus.jpg"
-                alt="Shri Dattabal Vidyamandir Campus"
-                className="w-full h-[460px] object-cover hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-transparent" />
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-amber-100/60 bg-gradient-to-br from-[#021f4a] via-[#043b8c] to-[#011438] p-6 sm:p-10 flex flex-col justify-between min-h-[300px] sm:min-h-[420px] text-white">
+              {/* Top Seal */}
+              <div className="flex items-center justify-between">
+                <span className="px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/30 text-[10px] sm:text-xs font-bold tracking-wider uppercase">
+                  Est. 1989 · 35+ Years Legacy
+                </span>
+                <span className="text-xs text-blue-200 font-semibold">Kolhapur, Maharashtra</span>
+              </div>
 
-              {/* Floating Mission Badge Card */}
-              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-5 rounded-2xl border border-white/60 text-slate-900 shadow-xl flex items-center gap-4">
-                <div className="w-16 h-16 rounded-full border-2 border-amber-500 overflow-hidden bg-white shrink-0 shadow-md">
+              {/* Center Logo Showcase */}
+              <div className="my-6 flex flex-col items-center text-center">
+                <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-amber-400 overflow-hidden shadow-2xl bg-white p-1 mb-4">
                   <img
                     src="/images/dattabal_logo.png"
-                    alt="Shri Dattabal Mission Divine"
-                    className="w-full h-full object-cover"
+                    alt="Shri Dattabal Mission Divine Kolhapur"
+                    className="w-full h-full object-contain rounded-full"
                   />
                 </div>
-                <div>
-                  <h4 className="font-serif font-bold text-base text-slate-900">
-                    Shri Dattabal Mission Divine Kolhapur
-                  </h4>
-                  <p className="text-xs text-slate-600 leading-snug">
-                    "Fostering wisdom, values, and character through 35+ years of trusted educational excellence."
-                  </p>
-                </div>
+                <h3 className="font-serif font-bold text-xl sm:text-2xl text-white tracking-wide">
+                  श्री दत्तबाळ विद्यामंदिर
+                </h3>
+                <p className="text-xs sm:text-sm text-amber-300 font-semibold mt-1">
+                  SHRI DATTABAL MISSION DIVINE, KOLHAPUR
+                </p>
+              </div>
+
+              {/* Bottom Mission Strip */}
+              <div className="bg-white/10 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl border border-white/20 text-center">
+                <p className="text-xs text-blue-100 italic">
+                  "Nurturing wisdom, character, and foundational excellence for every child."
+                </p>
               </div>
             </div>
 

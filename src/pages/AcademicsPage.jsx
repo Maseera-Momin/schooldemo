@@ -1,4 +1,5 @@
 import React from 'react';
+import MediumsShowcase from '../sections/MediumsShowcase';
 import AcademicsOverview from '../sections/AcademicsOverview';
 import AchievementsSection from '../sections/AchievementsSection';
 import FacultySection from '../sections/FacultySection';
@@ -10,17 +11,18 @@ export default function AcademicsPage({ setActivePage }) {
         <div className="absolute inset-0 bg-oak-pattern opacity-40 pointer-events-none" />
         <div className="relative z-10 max-w-7xl mx-auto space-y-3">
           <span className="text-xs font-bold uppercase tracking-widest text-amber-300">
-            CURRICULUM EXCELLENCE
+            DUAL CURRICULUM PATHWAYS
           </span>
           <h1 className="text-4xl sm:text-5xl font-serif font-bold">
-            Academics at Shri Dattabal Vidyamandir
+            Academics: English & Semi-English Medium
           </h1>
           <p className="text-blue-100 max-w-2xl text-sm sm:text-base">
-            From joyful Pre-Primary play-way foundations to Primary & Upper Primary conceptual clarity, practical science experiments, mathematics, and digital literacy.
+            Providing parents with the choice of 100% English Medium or bilingual Semi-English Medium (Science & Mathematics in English) under the Maharashtra State Board framework.
           </p>
         </div>
       </div>
 
+      <MediumsShowcase setActivePage={setActivePage} />
       <AcademicsOverview setActivePage={setActivePage} />
       <AchievementsSection />
       <FacultySection setActivePage={setActivePage} />

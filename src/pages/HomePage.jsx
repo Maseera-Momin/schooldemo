@@ -5,6 +5,7 @@ import AboutSection from '../sections/AboutSection';
 import PrincipalSection from '../sections/PrincipalSection';
 import HighlightsSection from '../sections/HighlightsSection';
 import AcademicsOverview from '../sections/AcademicsOverview';
+import MediumsShowcase from '../sections/MediumsShowcase';
 import WhyChooseUs from '../sections/WhyChooseUs';
 import FacilitiesSection from '../sections/FacilitiesSection';
 import VideosReelsSection from '../sections/VideosReelsSection';
@@ -23,6 +24,7 @@ export default function HomePage({ setActivePage }) {
       <AboutSection setActivePage={setActivePage} />
       <PrincipalSection />
       <HighlightsSection />
+      <MediumsShowcase setActivePage={setActivePage} />
       <AcademicsOverview setActivePage={setActivePage} />
       <WhyChooseUs />
       <FacilitiesSection setActivePage={setActivePage} />

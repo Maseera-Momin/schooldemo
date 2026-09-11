@@ -6,7 +6,14 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
     scroll-behavior: auto;
     -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 }
 
@@ -60,5 +67,26 @@
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Luxury Shimmer Gradient Animation for Hero Accents */
+@keyframes goldShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.text-gold-shimmer {
+  background: linear-gradient(
+    110deg,
+    #93c5fd 0%,
+    #e0f2fe 25%,
+    #fef08a 50%,
+    #e0f2fe 75%,
+    #93c5fd 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldShimmer 6s linear infinite;
 }
 

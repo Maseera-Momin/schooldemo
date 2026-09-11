@@ -33,7 +33,7 @@ export default function Footer({ setActivePage }) {
                 SHRI DATTABAL VIDYAMANDIR
               </div>
               <div className="text-[#a8d4ff] text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase">
-                Kolhapur, Maharashtra (Est. 1989)
+                English & Semi-English Medium • Kolhapur (Est. 1989)
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function Footer({ setActivePage }) {
           </h4>
           <ul className="space-y-2.5 text-xs">
             <li><button onClick={() => handleNav('about')} className="hover:text-white transition-colors cursor-pointer text-left py-0.5">About Shri Dattabal Vidyamandir</button></li>
-            <li><button onClick={() => handleNav('academics')} className="hover:text-white transition-colors cursor-pointer text-left py-0.5">Academics (Nursery to Grade 10)</button></li>
+            <li><button onClick={() => handleNav('academics')} className="hover:text-white transition-colors cursor-pointer text-left py-0.5">Academics (English & Semi-English)</button></li>
             <li><button onClick={() => handleNav('admissions')} className="hover:text-white transition-colors cursor-pointer text-left py-0.5">Admissions 2026–27 (Enrollment)</button></li>
             <li><button onClick={() => handleNav('facilities')} className="hover:text-white transition-colors cursor-pointer text-left py-0.5">19 Classrooms & 1,373-Book Library</button></li>
             <li><button onClick={() => handleNav('faculty')} className="hover:text-white transition-colors cursor-pointer text-left py-0.5">Head Teacher & Faculty (14 Teachers)</button></li>

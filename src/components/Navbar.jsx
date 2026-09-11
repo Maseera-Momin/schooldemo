@@ -58,7 +58,7 @@ export default function Navbar({ activePage, setActivePage }) {
                 SHRI DATTABAL VIDYAMANDIR
               </div>
               <div className="text-[#a8d4ff] font-sans font-semibold text-[9px] sm:text-[10px] md:text-xs tracking-wider uppercase truncate">
-                Shri Dattabal Mission Divine • Kolhapur (Est. 1989)
+                English & Semi-English Medium • Kolhapur (Est. 1989)
               </div>
             </div>
           </button>
