@@ -21,7 +21,7 @@ export default function GalleryPage({ setActivePage }) {
       </div>
 
       <VideosReelsSection setActivePage={setActivePage} />
-      <GallerySection setActivePage={setActivePage} />
+      <GallerySection setActivePage={setActivePage} isFullPage={true} />
     </div>
   );
 }

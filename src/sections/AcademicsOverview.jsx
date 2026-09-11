@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { academicLevels } from '../data/schoolData';
 import { motion, AnimatePresence } from 'motion/react';
-import { Check, ArrowRight, BookOpen, Sparkles } from 'lucide-react';
+import { Check, ArrowRight, BookOpen, Sparkles, Clock } from 'lucide-react';
 
 export default function AcademicsOverview({ setActivePage }) {
   const [selectedTab, setSelectedTab] = useState(academicLevels[0].id);
@@ -23,9 +23,9 @@ export default function AcademicsOverview({ setActivePage }) {
           </p>
         </div>
 
-        {/* Tab Selection */}
-        <div className="flex justify-center mb-10">
-          <div className="inline-flex p-1.5 rounded-full bg-slate-100 border border-slate-200 gap-1.5 flex-wrap justify-center shadow-inner">
+        {/* Level Tabs */}
+        <div className="flex justify-center mb-8">
+          <div className="inline-flex p-1.5 bg-slate-100 rounded-full border border-slate-200 flex-wrap justify-center gap-1">
             {academicLevels.map((level) => (
               <button
                 key={level.id}
@@ -55,10 +55,18 @@ export default function AcademicsOverview({ setActivePage }) {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-7 space-y-6">
                 <div>
-                  <span className="text-xs font-bold text-[#be185d] tracking-wider uppercase">
-                    {activeLevel.subtitle}
-                  </span>
-                  <h3 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 mt-1">
+                  <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                    <span className="text-xs font-bold text-[#be185d] tracking-wider uppercase">
+                      {activeLevel.subtitle}
+                    </span>
+                    {activeLevel.timing && (
+                      <span className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-900">
+                        <Clock className="w-3.5 h-3.5 text-amber-600" />
+                        <span>Timings: {activeLevel.timing}</span>
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900">
                     {activeLevel.title}
                   </h3>
                 </div>
@@ -99,13 +107,21 @@ export default function AcademicsOverview({ setActivePage }) {
                 <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-md space-y-4">
                   <div className="w-full h-48 rounded-xl overflow-hidden relative">
                     <img
-                      src={activeLevel.id === 'pre-primary' ? "/images/classroom.jpg" : activeLevel.id === 'primary' ? "/images/library.jpg" : "/images/computer_lab.jpg"}
+                      src={
+                        activeLevel.id === 'pre-primary' ? "/images/events/sweet-corn-party.jpg" :
+                        activeLevel.id === 'primary' ? "/images/events/butterfly-craft.jpg" :
+                        activeLevel.id === 'upper-primary' ? "/images/events/solar-system-activity.jpg" :
+                        "/images/events/eclipse-practical.jpg"
+                      }
                       alt={activeLevel.title}
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
-                    <div className="absolute bottom-3 left-3 text-white text-xs font-bold bg-black/60 px-2.5 py-1 rounded-md">
-                      {activeLevel.id === 'pre-primary' ? '5 Pre-Primary Educators' : '8 Primary & Upper Primary Teachers'}
+                    <div className="absolute bottom-3 left-3 text-white text-xs font-semibold bg-slate-950/75 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-white/20 shadow">
+                      {activeLevel.id === 'pre-primary' ? '🎨 Joyful Play-Way Activity' :
+                       activeLevel.id === 'primary' ? '✂️ Creative Arts & Motor Skills' :
+                       activeLevel.id === 'upper-primary' ? '🔬 Hands-on Science Exploration' :
+                       '📐 Practical Labs & Academic Focus'}
                     </div>
                   </div>
 

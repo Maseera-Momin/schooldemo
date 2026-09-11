@@ -7,12 +7,10 @@ import HighlightsSection from '../sections/HighlightsSection';
 import AcademicsOverview from '../sections/AcademicsOverview';
 import MediumsShowcase from '../sections/MediumsShowcase';
 import WhyChooseUs from '../sections/WhyChooseUs';
-import FacilitiesSection from '../sections/FacilitiesSection';
 import VideosReelsSection from '../sections/VideosReelsSection';
 import EventsSection from '../sections/EventsSection';
 import AchievementsSection from '../sections/AchievementsSection';
 import GallerySection from '../sections/GallerySection';
-import FacultySection from '../sections/FacultySection';
 import AdmissionsTimeline from '../sections/AdmissionsTimeline';
 import ContactSection from '../sections/ContactSection';
 
@@ -27,12 +25,10 @@ export default function HomePage({ setActivePage }) {
       <MediumsShowcase setActivePage={setActivePage} />
       <AcademicsOverview setActivePage={setActivePage} />
       <WhyChooseUs />
-      <FacilitiesSection setActivePage={setActivePage} />
       <VideosReelsSection setActivePage={setActivePage} />
       <EventsSection setActivePage={setActivePage} />
       <AchievementsSection />
       <GallerySection setActivePage={setActivePage} />
-      <FacultySection setActivePage={setActivePage} />
       <AdmissionsTimeline setActivePage={setActivePage} />
       <ContactSection />
     </main>

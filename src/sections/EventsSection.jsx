@@ -31,7 +31,7 @@ export default function EventsSection({ setActivePage }) {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {eventsList.map((evt, idx) => (
             <motion.div
               key={evt.id}
@@ -42,10 +42,14 @@ export default function EventsSection({ setActivePage }) {
               className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
             >
               <div>
-                <div className="relative h-44 w-full overflow-hidden">
+                <div className="relative h-36 sm:h-44 w-full overflow-hidden">
                   <img
-                    src={evt.image}
+                    src={evt.image || '/images/events/ashadhi-ekadashi.jpg'}
                     alt={evt.title}
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = '/images/events/ashadhi-ekadashi.jpg';
+                    }}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-3 left-3 bg-[#04439c] text-white rounded-lg p-2 text-center min-w-[54px] shadow-md">

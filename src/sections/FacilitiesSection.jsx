@@ -1,7 +1,25 @@
 import React from 'react';
 import { facilitiesList } from '../data/schoolData';
 import { motion } from 'motion/react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Building2, BookOpen, Monitor, Award, ShieldCheck, Shield } from 'lucide-react';
+
+const facilityIcons = {
+  classrooms: Building2,
+  library: BookOpen,
+  computers: Monitor,
+  playground: Award,
+  hygiene: ShieldCheck,
+  'campus-security': Shield,
+};
+
+const cardGradients = [
+  'from-blue-900 via-indigo-950 to-slate-900',
+  'from-amber-950 via-slate-900 to-blue-950',
+  'from-cyan-950 via-slate-900 to-indigo-950',
+  'from-emerald-950 via-slate-900 to-teal-950',
+  'from-sky-950 via-slate-900 to-blue-950',
+  'from-purple-950 via-slate-900 to-slate-950',
+];
 
 export default function FacilitiesSection({ setActivePage }) {
   return (
@@ -20,52 +38,61 @@ export default function FacilitiesSection({ setActivePage }) {
             </p>
           </div>
 
-          <button
-            onClick={() => {
-              setActivePage('facilities');
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            className="inline-flex items-center gap-2 text-xs font-bold text-[#04439c] hover:text-[#be185d] transition-colors cursor-pointer"
-          >
-            Explore All Facilities <ArrowUpRight className="w-4 h-4" />
-          </button>
-        </div>
-
-        {/* Facilities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {facilitiesList.map((item, idx) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.08, duration: 0.5 }}
-              className="group relative rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-slate-900 h-80 cursor-pointer"
+          {setActivePage && (
+            <button
               onClick={() => {
                 setActivePage('facilities');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
+              className="inline-flex items-center gap-2 text-xs font-bold text-[#04439c] hover:text-[#be185d] transition-colors cursor-pointer"
             >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent" />
+              Explore All Facilities <ArrowUpRight className="w-4 h-4" />
+            </button>
+          )}
+        </div>
 
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white space-y-2 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-blue-900/80 backdrop-blur-md text-blue-200 border border-blue-700/50">
-                  {item.category}
-                </span>
-                <h3 className="font-serif font-bold text-lg sm:text-xl text-white group-hover:text-amber-300 transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-xs text-slate-300 line-clamp-2 opacity-80 group-hover:opacity-100 transition-opacity">
-                  {item.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+        {/* Facilities Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {facilitiesList.map((item, idx) => {
+            const IconComponent = facilityIcons[item.id] || Building2;
+            const bgGradient = cardGradients[idx % cardGradients.length];
+
+            return (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.08, duration: 0.5 }}
+                className={`group relative rounded-2xl overflow-hidden shadow-md border border-slate-700/60 bg-gradient-to-br ${bgGradient} p-7 flex flex-col justify-between min-h-[260px] hover:shadow-xl hover:border-amber-400/40 transition-all duration-300`}
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center text-amber-300 group-hover:scale-110 group-hover:bg-amber-400 group-hover:text-slate-950 transition-all">
+                      <IconComponent className="w-6 h-6" />
+                    </div>
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/10 text-blue-200 border border-white/15">
+                      {item.category}
+                    </span>
+                  </div>
+
+                  <div>
+                    <h3 className="font-serif font-bold text-lg sm:text-xl text-white group-hover:text-amber-300 transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed opacity-90">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-4 mt-4 border-t border-white/10 flex items-center justify-between text-[11px] text-blue-200 font-semibold">
+                  <span>Verified Campus Facility</span>
+                  <span className="text-amber-300">Shri Dattabal</span>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

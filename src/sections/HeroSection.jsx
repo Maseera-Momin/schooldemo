@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'motion/react';
-import { Info, MapPin, PenTool, ArrowDown, Video, ExternalLink, Sparkles } from 'lucide-react';
+import { ArrowDown, ArrowRight, Video } from 'lucide-react';
 
 export default function HeroSection({ setActivePage }) {
   const containerRef = useRef(null);
@@ -138,7 +138,7 @@ export default function HeroSection({ setActivePage }) {
       {/* 2. MAIN HERO FOREGROUND CONTENT WITH MULTIPLANE PARALLAX           */}
       {/* ------------------------------------------------------------------ */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 py-10 sm:py-16 my-auto w-full">
-        <div className="max-w-3xl space-y-5 sm:space-y-7">
+        <div className="max-w-4xl space-y-5 sm:space-y-7">
           
 
           {/* School Main Heading with Liquid Blur & Parallax Exit */}
@@ -176,7 +176,7 @@ export default function HeroSection({ setActivePage }) {
             Premier <strong>English Medium & Semi-English Medium</strong> education under <strong>Shri Dattabal Mission Divine Kolhapur</strong>. Fostering character, scientific curiosity, and state board excellence from <strong>Nursery to Grade 10</strong>.
           </motion.p>
 
-          {/* Dual Medium Quick Showcase Pills */}
+          {/* Dual Medium Academic Wings */}
           <motion.div
             style={{
               y: pillsY,
@@ -185,59 +185,36 @@ export default function HeroSection({ setActivePage }) {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-wrap items-center gap-2 sm:gap-3"
+            className="flex flex-wrap items-center gap-2.5 sm:gap-3"
           >
             <button
+              type="button"
               onClick={() => {
                 const el = document.getElementById('mediums-showcase');
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
                 else if (setActivePage) setActivePage('academics');
               }}
-              className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-blue-600/30 hover:bg-blue-600/50 border border-blue-400/40 text-blue-100 backdrop-blur-md transition-all text-[11px] sm:text-xs font-semibold cursor-pointer shadow-sm group"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-white/[0.08] hover:bg-white/[0.14] border border-white/15 text-slate-200 hover:text-white text-xs font-medium tracking-wide backdrop-blur-md transition-all cursor-pointer"
             >
-              <span className="w-2 h-2 rounded-full bg-blue-400 group-hover:scale-125 transition-transform" />
+              <span className="w-1.5 h-1.5 rounded-full bg-sky-400" />
               <span>English Medium (Nursery – 10th)</span>
             </button>
 
             <button
+              type="button"
               onClick={() => {
                 const el = document.getElementById('mediums-showcase');
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
                 else if (setActivePage) setActivePage('academics');
               }}
-              className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-emerald-600/30 hover:bg-emerald-600/50 border border-emerald-400/40 text-emerald-100 backdrop-blur-md transition-all text-[11px] sm:text-xs font-semibold cursor-pointer shadow-sm group"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-white/[0.08] hover:bg-white/[0.14] border border-white/15 text-slate-200 hover:text-white text-xs font-medium tracking-wide backdrop-blur-md transition-all cursor-pointer"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-400 group-hover:scale-125 transition-transform" />
-              <span>Semi-English Medium (1st – 10th)</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+              <span>Semi-English Medium (Nursery – 10th)</span>
             </button>
           </motion.div>
 
-          {/* Highlights Mini Pills with Independent Float */}
-          <motion.div
-            style={{
-              y: pillsY,
-              opacity: pillsOpacity,
-            }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-wrap gap-2 sm:gap-3 text-[11px] sm:text-xs md:text-sm"
-          >
-            <span className="px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-xl bg-black/50 border border-white/20 text-white font-semibold backdrop-blur-md shadow-md hover:border-amber-400/50 transition-colors">
-              🏛️ 19 Classrooms
-            </span>
-            <span className="px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-xl bg-black/50 border border-white/20 text-white font-semibold backdrop-blur-md shadow-md hover:border-amber-400/50 transition-colors">
-              📚 1,373 Books Library
-            </span>
-            <span className="px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-xl bg-black/50 border border-white/20 text-white font-semibold backdrop-blur-md shadow-md hover:border-amber-400/50 transition-colors">
-              🚻 22 Clean Toilets
-            </span>
-            <span className="px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-xl bg-black/50 border border-white/20 text-white font-semibold backdrop-blur-md shadow-md hover:border-amber-400/50 transition-colors">
-              💻 5 Computers
-            </span>
-          </motion.div>
-
-          {/* Action Buttons & Fast Links */}
+          {/* Institutional Actions & Fast Links */}
           <motion.div
             style={{
               y: actionsY,
@@ -245,81 +222,58 @@ export default function HeroSection({ setActivePage }) {
             }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="pt-2 sm:pt-4 space-y-4 sm:space-y-6"
+            transition={{ duration: 0.8, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            className="pt-2 sm:pt-3 space-y-4"
           >
             <div className="flex flex-wrap items-center gap-3 sm:gap-4">
-              {/* Primary Button with Micro-Spring Press */}
-              <motion.button
-                whileHover={{ scale: 1.03, boxShadow: "0 20px 40px rgba(245,158,11,0.4)" }}
-                whileTap={{ scale: 0.97 }}
-                onClick={scrollToContent}
-                className="inline-flex items-center justify-between gap-2.5 px-5 py-3 sm:px-7 sm:py-4 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 text-slate-950 font-bold text-xs sm:text-sm tracking-wide shadow-2xl transition-all cursor-pointer"
-              >
-                <span>Explore School Details</span>
-                <ArrowDown className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-950" />
-              </motion.button>
-
-              {/* Video Gallery Link */}
-              <motion.a
-                whileHover={{ scale: 1.03, borderColor: "rgba(255,255,255,0.5)" }}
-                whileTap={{ scale: 0.97 }}
-                href="#video-gallery"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleOpenGallery();
+              {/* Primary Admissions CTA */}
+              <button
+                type="button"
+                onClick={() => {
+                  if (setActivePage) setActivePage('admissions');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="inline-flex items-center gap-2 px-4 py-3 sm:px-6 sm:py-4 rounded-full bg-black/60 border border-white/30 text-white text-xs sm:text-sm font-bold tracking-wider transition-all cursor-pointer backdrop-blur-md shadow-xl"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 active:scale-[0.98] text-slate-950 font-bold text-xs sm:text-sm tracking-wide shadow-lg shadow-amber-500/20 hover:shadow-amber-500/30 transition-all cursor-pointer"
               >
-                <Video className="w-4 h-4 text-pink-400" />
-                <span>Watch Reels & Videos</span>
-                <ExternalLink className="w-3.5 h-3.5 text-pink-300" />
-              </motion.a>
+                <span>Admissions 2026–27</span>
+                <ArrowRight className="w-4 h-4 text-slate-950" />
+              </button>
+
+              {/* Secondary Campus Tour / Explore CTA */}
+              <button
+                type="button"
+                onClick={scrollToContent}
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 active:scale-[0.98] border border-white/20 text-white font-semibold text-xs sm:text-sm tracking-wide backdrop-blur-md transition-all cursor-pointer"
+              >
+                <span>Explore School</span>
+                <ArrowDown className="w-3.5 h-3.5 text-white/70" />
+              </button>
+
+              {/* Watch Video Link */}
+              <button
+                type="button"
+                onClick={handleOpenGallery}
+                className="inline-flex items-center gap-2 px-4 py-3.5 rounded-xl bg-transparent hover:bg-white/5 active:scale-[0.98] text-slate-300 hover:text-white font-medium text-xs sm:text-sm transition-all cursor-pointer"
+              >
+                <Video className="w-4 h-4 text-amber-400" />
+                <span>Watch Campus Reel</span>
+              </button>
             </div>
 
-            {/* Circular Action Icons: INQUIRE, VISIT, APPLY */}
-            <div className="flex items-center space-x-6 sm:space-x-8 pt-1 sm:pt-2">
-              <motion.button
-                whileHover={{ y: -3 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => { setActivePage('admissions'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                className="flex flex-col items-center group cursor-pointer"
-              >
-                <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-black/60 border border-white/30 flex items-center justify-center text-white group-hover:bg-amber-400 group-hover:text-slate-950 transition-all shadow-md backdrop-blur-md">
-                  <Info className="w-4 h-4 sm:w-6 sm:h-6" />
-                </div>
-                <span className="text-[9px] sm:text-xs font-bold tracking-widest text-blue-200 group-hover:text-white uppercase mt-1.5 drop-shadow">
-                  INQUIRE
-                </span>
-              </motion.button>
-
-              <motion.button
-                whileHover={{ y: -3 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => { setActivePage('contact'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                className="flex flex-col items-center group cursor-pointer"
-              >
-                <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-black/60 border border-white/30 flex items-center justify-center text-white group-hover:bg-amber-400 group-hover:text-slate-950 transition-all shadow-md backdrop-blur-md">
-                  <MapPin className="w-4 h-4 sm:w-6 sm:h-6" />
-                </div>
-                <span className="text-[9px] sm:text-xs font-bold tracking-widest text-blue-200 group-hover:text-white uppercase mt-1.5 drop-shadow">
-                  VISIT
-                </span>
-              </motion.button>
-
-              <motion.button
-                whileHover={{ y: -3 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => { setActivePage('admissions'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                className="flex flex-col items-center group cursor-pointer"
-              >
-                <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-black/60 border border-white/30 flex items-center justify-center text-white group-hover:bg-amber-400 group-hover:text-slate-950 transition-all shadow-md backdrop-blur-md">
-                  <PenTool className="w-4 h-4 sm:w-6 sm:h-6" />
-                </div>
-                <span className="text-[9px] sm:text-xs font-bold tracking-widest text-blue-200 group-hover:text-white uppercase mt-1.5 drop-shadow">
-                  APPLY
-                </span>
-              </motion.button>
+            {/* Institutional Trust Indicators */}
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-1 text-xs text-slate-300/80 font-normal">
+              <span className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block" />
+                Govt. Recognized (SSC Board)
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-400 inline-block" />
+                Subhashnagar, Kolhapur
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-sky-400 inline-block" />
+                Estd. 1989
+              </span>
             </div>
           </motion.div>
         </div>

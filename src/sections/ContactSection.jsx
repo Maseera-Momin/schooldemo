@@ -98,9 +98,14 @@ export default function ContactSection() {
                 <div className="p-2 rounded-lg bg-blue-100/60 text-[#04439c] shrink-0 mt-0.5">
                   <Clock className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
-                <div>
-                  <strong className="block text-slate-900 font-bold text-xs uppercase">Working Hours</strong>
-                  <span className="text-xs text-slate-600 block">{schoolDetails.officeHours}</span>
+                <div className="space-y-1">
+                  <strong className="block text-slate-900 font-bold text-xs uppercase">School & Office Timings</strong>
+                  <div className="text-xs text-slate-700 space-y-1">
+                    <p><strong className="text-amber-800">Nursery / Pre-Primary:</strong> 10:00 AM – 1:30 PM</p>
+                    <p><strong className="text-blue-900">English Medium (1st–10th):</strong> 10:00 AM – 4:00 PM</p>
+                    <p><strong className="text-teal-900">Semi-English Medium (1st–10th):</strong> 11:00 AM – 5:00 PM</p>
+                    <p className="text-[11px] text-slate-500 pt-0.5">Administrative Office: Mon–Sat: 9:30 AM – 5:30 PM</p>
+                  </div>
                 </div>
               </div>
             </div>

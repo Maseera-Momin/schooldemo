@@ -66,28 +66,48 @@ export default function StudentLifeSection({ setActivePage }) {
           {/* Right Column: Photography Collage */}
           <div className="lg:col-span-6 grid grid-cols-2 gap-4">
             <div className="space-y-4">
-              <img
-                src="/images/sports_ground.jpg"
-                alt="Sports & Lezim Drill Ground"
-                className="w-full h-56 object-cover rounded-2xl shadow-md border border-slate-200"
-              />
-              <img
-                src="/images/library.jpg"
-                alt="1,373 Books Saraswati Library"
-                className="w-full h-40 object-cover rounded-2xl shadow-md border border-slate-200"
-              />
+              <div className="relative group overflow-hidden rounded-2xl shadow-md border border-slate-200">
+                <img
+                  src="/images/events/sports-tournament.jpg"
+                  alt="Sports Tournament & Girls Football Team"
+                  className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute bottom-2 left-2 bg-black/70 backdrop-blur-sm text-white text-[10px] font-semibold px-2 py-0.5 rounded">
+                  🏆 Sports Tournament
+                </div>
+              </div>
+              <div className="relative group overflow-hidden rounded-2xl shadow-md border border-slate-200">
+                <img
+                  src="/images/events/solar-system-activity.jpg"
+                  alt="Solar System Science Activity"
+                  className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute bottom-2 left-2 bg-black/70 backdrop-blur-sm text-white text-[10px] font-semibold px-2 py-0.5 rounded">
+                  🪐 Solar System Science
+                </div>
+              </div>
             </div>
             <div className="space-y-4 pt-6">
-              <img
-                src="/images/computer_lab.jpg"
-                alt="Computer Literacy Lab"
-                className="w-full h-40 object-cover rounded-2xl shadow-md border border-slate-200"
-              />
-              <img
-                src="/images/cultural_gathering.jpg"
-                alt="Cultural Annual Gathering"
-                className="w-full h-56 object-cover rounded-2xl shadow-md border border-slate-200"
-              />
+              <div className="relative group overflow-hidden rounded-2xl shadow-md border border-slate-200">
+                <img
+                  src="/images/events/ganesh-modak-making.jpg"
+                  alt="Ganesh Festival Modak Activity"
+                  className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute bottom-2 left-2 bg-black/70 backdrop-blur-sm text-white text-[10px] font-semibold px-2 py-0.5 rounded">
+                  🥟 Modak Crafting
+                </div>
+              </div>
+              <div className="relative group overflow-hidden rounded-2xl shadow-md border border-slate-200">
+                <img
+                  src="/images/events/ashadhi-ekadashi.jpg"
+                  alt="Ashadhi Ekadashi Cultural Celebration"
+                  className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute bottom-2 left-2 bg-black/70 backdrop-blur-sm text-white text-[10px] font-semibold px-2 py-0.5 rounded">
+                  🚩 Ashadhi Ekadashi
+                </div>
+              </div>
             </div>
           </div>
 

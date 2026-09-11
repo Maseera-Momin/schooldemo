@@ -54,13 +54,13 @@ export default function AdmissionsTimeline({ setActivePage }) {
               <span className="px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-xs font-bold uppercase tracking-wider">
                 Math & Science in English
               </span>
-              <span className="text-xs font-mono font-semibold text-slate-500">Grade 1 to Grade 10</span>
+              <span className="text-xs font-mono font-semibold text-slate-500">Nursery to Grade 10</span>
             </div>
             <h3 className="text-xl sm:text-2xl font-serif font-bold text-slate-900 mb-2">
               Semi-English Medium Wing
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-              Enrolling from Grade 1 to Grade 10. Perfect for students seeking English fluency in Science & Math while maintaining effortless concept grasp in Marathi for Social Studies.
+              Enrolling from Nursery to Grade 10. Perfect for students seeking English fluency in Science & Math while maintaining effortless concept grasp in Marathi for Social Studies.
             </p>
             <div className="text-xs font-semibold text-teal-900 bg-teal-50/70 p-3 rounded-xl border border-teal-100 flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0" />
@@ -116,7 +116,7 @@ export default function AdmissionsTimeline({ setActivePage }) {
           <div className="lg:col-span-5 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 text-center space-y-4">
             <h4 className="font-bold text-white text-lg">Enquire for Admission</h4>
             <p className="text-xs text-blue-200">
-              Session commences in April. Office hours: 8:00 AM to 4:30 PM (Mon–Sat).
+              Session commences in April. Office hours: 9:30 AM to 5:30 PM (Mon–Sat).
             </p>
             <button
               onClick={() => {

@@ -1,90 +1,127 @@
 import React from 'react';
-import { facultyList, schoolDetails } from '../data/schoolData';
 import { motion } from 'motion/react';
-import { Award, Mail, GraduationCap, Users, Phone } from 'lucide-react';
+import { ShieldCheck, Phone, ArrowRight } from 'lucide-react';
 
 export default function FacultySection({ setActivePage }) {
-  return (
-    <section className="py-20 bg-white border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#04439c] px-3.5 py-1 bg-blue-50 rounded-full border border-blue-100">
-              FACULTY & LEADERSHIP
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 mt-2">
-              Experienced & Compassionate Educators
-            </h2>
-            <p className="text-sm text-slate-600 mt-1">
-              Led by Head Teacher <strong>SAWANT JAYSHREE TANAJI</strong>, with 14 passionate educators (4 Male, 4 Female & 5 Pre-Primary teachers).
-            </p>
-          </div>
 
-          <button
-            onClick={() => {
-              setActivePage('faculty');
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            className="inline-flex items-center gap-2 text-xs font-bold text-[#04439c] hover:text-[#be185d] transition-colors cursor-pointer"
-          >
-            View Full Faculty Directory
-          </button>
+  return (
+    <section className="py-20 bg-slate-50 border-b border-slate-200">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto space-y-3 mb-14">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#04439c] px-3.5 py-1 bg-blue-100/70 rounded-full border border-blue-200">
+            FACULTY & TEACHING EXCELLENCE
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900">
+            Dedicated Educators Inspiring Young Minds
+          </h2>
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+            Led by Head Teacher <strong>SAWANT JAYSHREE TANAJI</strong>, our 14 qualified educators bring decades of pedagogical experience, character building, and state board excellence to English and Semi-English wings.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {facultyList.map((teacher, idx) => (
-            <motion.div
-              key={teacher.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.08, duration: 0.5 }}
-              className="group bg-slate-50 rounded-2xl border border-slate-200/90 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
-            >
+        {/* Real Staff Room Photo & Academic Standards Banner */}
+        <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12">
+            
+            {/* Real Staff Room Image */}
+            <div className="lg:col-span-6 relative min-h-[300px] sm:min-h-[360px] bg-slate-100">
+              <img
+                src="/images/teacher-staff-room.jpg"
+                alt="Faculty Collaborating in the Teacher Staff Room at Shri Dattabal Vidyamandir"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 text-white">
+                <span className="inline-block px-3 py-1 rounded-md bg-amber-500 text-slate-950 text-xs font-bold uppercase tracking-wider mb-2">
+                  Staff Room & Academic Planning
+                </span>
+                <p className="text-sm sm:text-base font-semibold text-white drop-shadow">
+                  Our teachers actively planning lesson modules and student assessments
+                </p>
+                <p className="text-xs text-slate-200/80 mt-0.5">
+                  Fostering regular peer collaboration and student-focused academic strategies
+                </p>
+              </div>
+            </div>
+
+            {/* Teaching Standards & Key Highlights */}
+            <div className="lg:col-span-6 p-6 sm:p-10 flex flex-col justify-between space-y-6">
               <div>
-                <div className="h-64 w-full overflow-hidden bg-slate-200 relative">
-                  <img
-                    src={teacher.image}
-                    alt={teacher.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#04439c] text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded shadow">
-                    {teacher.department}
-                  </div>
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full w-fit border border-emerald-200">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                  Govt. Recognized & Certified Teachers
+                </div>
+                <h3 className="text-2xl font-serif font-bold text-slate-900 mt-3">
+                  A High-Trust, Caring Academic Culture
+                </h3>
+                <p className="text-sm text-slate-600 leading-relaxed mt-2">
+                  At Shri Dattabal Vidyamandir, education goes beyond rote learning. Our teachers mentor children through personalized guidance, regular reading sessions in the 1,373-book library, and science practicals.
+                </p>
+              </div>
+
+              {/* 4 Key Pillars Stats */}
+              <div className="grid grid-cols-2 gap-4 pt-2 border-t border-slate-100">
+                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+                  <div className="text-2xl font-extrabold text-[#04439c]">14</div>
+                  <div className="text-xs font-semibold text-slate-700 mt-0.5">Total Educators</div>
+                  <div className="text-[11px] text-slate-500">8 Primary/Upper + 5 Pre-Primary</div>
                 </div>
 
-                <div className="p-5 space-y-2">
-                  <h3 className="font-serif font-bold text-base sm:text-lg text-slate-900 leading-snug group-hover:text-[#04439c] transition-colors">
-                    {teacher.name}
-                  </h3>
-                  <p className="text-xs font-semibold text-[#be185d]">{teacher.role}</p>
+                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+                  <div className="text-2xl font-extrabold text-amber-600">1:25</div>
+                  <div className="text-xs font-semibold text-slate-700 mt-0.5">Mentorship Ratio</div>
+                  <div className="text-[11px] text-slate-500">Personalized attention</div>
+                </div>
 
-                  <div className="flex items-start gap-1.5 text-xs text-slate-500 pt-1">
-                    <GraduationCap className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
-                    <span className="line-clamp-2">{teacher.degree}</span>
-                  </div>
+                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+                  <div className="text-2xl font-extrabold text-emerald-600">100%</div>
+                  <div className="text-xs font-semibold text-slate-700 mt-0.5">State Certified</div>
+                  <div className="text-[11px] text-slate-500">D.Ed, B.Ed, M.A. Qualified</div>
+                </div>
 
-                  <p className="text-xs text-slate-600 leading-relaxed pt-1 line-clamp-3">
-                    {teacher.bio}
-                  </p>
+                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+                  <div className="text-2xl font-extrabold text-purple-600">35+</div>
+                  <div className="text-xs font-semibold text-slate-700 mt-0.5">Years Legacy</div>
+                  <div className="text-[11px] text-slate-500">Under Mission Divine</div>
                 </div>
               </div>
 
-              <div className="p-5 pt-0">
+              {/* Action Link to Admissions / Contact */}
+              <div className="pt-2 flex flex-wrap items-center gap-4">
                 <button
+                  type="button"
                   onClick={() => {
-                    setActivePage('contact');
+                    const el = document.getElementById('principal-desk');
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    else if (setActivePage) setActivePage('about');
+                  }}
+                  className="inline-flex items-center gap-2 text-xs font-bold text-[#04439c] hover:text-[#be185d] transition-colors cursor-pointer"
+                >
+                  <span>Read Principal's Message</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (setActivePage) setActivePage('contact');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className="w-full py-2 rounded-lg bg-white border border-slate-200 hover:bg-[#04439c] hover:text-white text-xs font-bold text-[#04439c] transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-slate-900 transition-colors cursor-pointer ml-auto"
                 >
-                  <Phone className="w-3.5 h-3.5" /> Contact School Office
+                  <Phone className="w-3.5 h-3.5 text-slate-500" />
+                  <span>Contact Staff Office</span>
                 </button>
               </div>
-            </motion.div>
-          ))}
+
+            </div>
+          </div>
         </div>
+
       </div>
     </section>
   );
 }
+

@@ -10,7 +10,8 @@ import {
   Languages,
   Layers,
   HelpCircle,
-  Award
+  Award,
+  Clock
 } from 'lucide-react';
 
 export default function MediumsShowcase({ setActivePage }) {
@@ -127,6 +128,12 @@ export default function MediumsShowcase({ setActivePage }) {
                       <span className="text-xs font-semibold text-slate-500">
                         {activeStream.grades}
                       </span>
+                      {activeStream.timing && (
+                        <span className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-900">
+                          <Clock className="w-3.5 h-3.5 text-amber-600" />
+                          <span>School Hours: {activeStream.timing} (Nursery: 10:00 AM – 1:30 PM)</span>
+                        </span>
+                      )}
                     </div>
 
                     <h3 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900">
@@ -286,7 +293,21 @@ export default function MediumsShowcase({ setActivePage }) {
                 <tr>
                   <td className="py-3 px-4 font-semibold text-slate-800">Grades Offered</td>
                   <td className="py-3 px-4 text-slate-700 font-medium">Nursery to Grade 10</td>
-                  <td className="py-3 px-4 text-slate-700 font-medium">Grade 1 to Grade 10</td>
+                  <td className="py-3 px-4 text-slate-700 font-medium">Nursery to Grade 10</td>
+                </tr>
+                <tr className="bg-amber-50/50">
+                  <td className="py-3 px-4 font-bold text-amber-900 flex items-center gap-1.5">
+                    <Clock className="w-3.5 h-3.5 text-amber-600" />
+                    <span>Daily School Hours</span>
+                  </td>
+                  <td className="py-3 px-4 text-blue-900 font-bold">
+                    <div>10:00 AM – 4:00 PM</div>
+                    <div className="text-[11px] font-semibold text-amber-800 mt-0.5">Nursery: 10:00 AM – 1:30 PM</div>
+                  </td>
+                  <td className="py-3 px-4 text-teal-900 font-bold">
+                    <div>11:00 AM – 5:00 PM</div>
+                    <div className="text-[11px] font-semibold text-amber-800 mt-0.5">Nursery: 10:00 AM – 1:30 PM</div>
+                  </td>
                 </tr>
                 <tr className="bg-slate-50/50">
                   <td className="py-3 px-4 font-semibold text-slate-800">Science & Mathematics</td>

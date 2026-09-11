@@ -6,7 +6,7 @@ export const schoolDetails = {
   management: "Private Aided",
   schoolType: "Co-educational",
   medium: "English Medium & Semi-English Medium",
-  wings: ["English Medium (Nursery - 10th)", "Semi-English Medium (1st - 10th)"],
+  wings: ["English Medium (Nursery - 10th)", "Semi-English Medium (Nursery - 10th)"],
   grades: "Nursery to Grade 10",
   academicSession: "Starts in April",
   headTeacher: "SAWANT JAYSHREE TANAJI",
@@ -14,7 +14,10 @@ export const schoolDetails = {
   addressShort: "Kolhapur, Maharashtra",
   phone: "+91 231 265 4890 / +91 98220 12345",
   email: "dattabalvidyamandir.kop@gmail.com",
-  officeHours: "Monday – Saturday: 8:00 AM – 4:30 PM",
+  schoolHoursNursery: "10:00 AM – 1:30 PM (Mon–Sat)",
+  schoolHoursEnglish: "10:00 AM – 4:00 PM (Mon–Sat)",
+  schoolHoursSemiEnglish: "11:00 AM – 5:00 PM (Mon–Sat)",
+  officeHours: "Monday – Saturday: 9:30 AM – 5:30 PM",
   social: {
     facebook: "https://facebook.com",
     instagram: "https://www.instagram.com/reel/DcEXBU1T8p8/",
@@ -29,12 +32,15 @@ export const mediumStreams = [
     title: "English Medium Wing",
     subtitle: "Complete English Immersion & Modern Pedagogy",
     grades: "Nursery to Grade 10",
+    timing: "10:00 AM – 4:00 PM",
+    nurseryTiming: "10:00 AM – 1:30 PM",
     badge: "100% English Instruction",
     accentColor: "#04439c",
     tagColor: "bg-blue-600 text-white",
     description:
       "A comprehensive English immersion curriculum adhering to Maharashtra State Board guidelines. All core academic subjects—Mathematics, General Science, Social Sciences, and Computer Studies—are taught in English, fostering fluent communication, analytical reasoning, and global readiness.",
     highlights: [
+      "School Hours: 10:00 AM – 4:00 PM (Nursery / Pre-Primary: 10:00 AM – 1:30 PM)",
       "100% English instructional environment across all core academic disciplines",
       "Strong phonics, reading fluency, and creative writing programs from Pre-Primary",
       "Interactive science demonstrations, computer literacy, and mathematical logic",
@@ -55,13 +61,16 @@ export const mediumStreams = [
     id: "semi-english",
     title: "Semi-English Medium Wing",
     subtitle: "Bilingual Technical Edge & State Board Mastery",
-    grades: "Grade 1 to Grade 10",
+    grades: "Nursery to Grade 10",
+    timing: "11:00 AM – 5:00 PM",
+    nurseryTiming: "10:00 AM – 1:30 PM",
     badge: "Science & Math in English",
     accentColor: "#0d9488",
     tagColor: "bg-emerald-600 text-white",
     description:
       "The premier bilingual model recognized by the Maharashtra State Education Department. Science and Mathematics are taught in English to build essential technical and STEM terminology, while Social Sciences and Humanities are taught in Marathi for natural, deep conceptual comprehension.",
     highlights: [
+      "School Hours: 11:00 AM – 5:00 PM (Nursery / Pre-Primary: 10:00 AM – 1:30 PM)",
       "Mathematics & Science taught in English for high school & college technical readiness",
       "Social Sciences (History & Geography) taught in Marathi for superior retention and clarity",
       "Zero linguistic strain—smooth transition for students from regional language backgrounds",
@@ -99,10 +108,10 @@ export const quickInfoItems = [
   },
   {
     title: "School Hours",
-    subtitle: "8:00 AM – 3:30 PM",
-    description: "Daily morning assembly, academic periods, sports drills, and library reading hours.",
-    actionText: "Contact Us",
-    actionLink: "contact",
+    subtitle: "Nursery: 10–1:30 | Eng: 10–4 | Semi: 11–5",
+    description: "Nursery: 10:00 AM – 1:30 PM. English (1st–10th): 10:00 AM – 4:00 PM. Semi-English (1st–10th): 11:00 AM – 5:00 PM.",
+    actionText: "View Timings",
+    actionLink: "academics",
     badge: "Daily"
   },
   {
@@ -159,6 +168,7 @@ export const academicLevels = [
     id: "pre-primary",
     title: "Pre-Primary Section (Nursery & Kindergarten)",
     subtitle: "Play-Way Learning & Foundational Social Skills",
+    timing: "10:00 AM – 1:30 PM",
     description: "Our attached pre-primary section gently introduces young toddlers (ages 3 to 5) to school life through songs, storytelling, counting, motor skills development, and creative play guided by 5 dedicated pre-primary teachers.",
     subjects: ["Alphabet & Phonetics", "Early Numbers & Counting", "Rhymes & Moral Storytelling", "Drawing & Paper Craft", "Sensory Play & Physical Games"],
     approach: "Nurturing, play-based, stress-free environment promoting curiosity, language confidence, and emotional readiness."
@@ -512,7 +522,7 @@ export const eventsList = [
     time: "8:00 AM – 1:00 PM",
     location: "Main Assembly Ground",
     description: "Welcome of new students, distribution of textbooks, and traditional Saraswati Poojan to mark the new school session starting in April.",
-    image: null
+    image: "/images/events/guru-purnima.jpg"
   },
   {
     id: "event-2",
@@ -524,7 +534,7 @@ export const eventsList = [
     time: "7:30 AM – 10:30 AM",
     location: "School Playground",
     description: "Flag hoisting by dignitaries, student march-past parade, patriotic singing, and prize distribution for scholarship achievers.",
-    image: null
+    image: "/images/events/independence-day.jpg"
   },
   {
     id: "event-3",
@@ -536,7 +546,7 @@ export const eventsList = [
     time: "9:00 AM – 1:00 PM",
     location: "Auditorium Hall",
     description: "Upper primary students take on the role of teachers for the day, honoring our dedicated educators and Head Teacher Sawant Jayshree Tanaji.",
-    image: null
+    image: "/images/teacher-staff-room.jpg"
   },
   {
     id: "event-4",
@@ -548,7 +558,7 @@ export const eventsList = [
     time: "9:00 AM – 5:00 PM",
     location: "Main Stage & Sports Ground",
     description: "Grand annual day featuring traditional folk dances, Lezim performances, drama, elocution, running races, and community felicitation.",
-    image: null
+    image: "/images/events/ashadhi-ekadashi.jpg"
   }
 ];
 
@@ -605,23 +615,42 @@ export const achievementStats = [
 ];
 
 export const galleryItems = [
-  { id: 1, title: "Main School Building & Entrance Gate", category: "Campus", image: null },
-  { id: 2, title: "School Library (1,373+ Books)", category: "Classrooms", image: null },
-  { id: 3, title: "5-System Computer Learning Unit", category: "Classrooms", image: null },
-  { id: 4, title: "Head Teacher & Faculty Administration", category: "Events", image: null },
-  { id: 5, title: "Sports Playground & Lezim Drills", category: "Sports", image: null },
-  { id: 6, title: "Annual Gathering & Cultural Showcase", category: "Cultural", image: null }
+  { id: 1, title: "Ashadhi Ekadashi Palkhi & Warkari Dindi", category: "Cultural", image: "/images/events/ashadhi-ekadashi.jpg" },
+  { id: 2, title: "Guru Purnima & Matru-Pitru Pujan", category: "Cultural", image: "/images/events/guru-purnima.jpg" },
+  { id: 3, title: "Ganesh Festival Fresh Modak Crafting", category: "Cultural", image: "/images/events/ganesh-modak-making.jpg" },
+  { id: 4, title: "Bal Krishna Janmashtami & Dahi Handi Joy", category: "Cultural", image: "/images/events/janmashtami-celebration.jpg" },
+  { id: 5, title: "Kindergarten Green Day & Nature Celebration", category: "Cultural", image: "/images/events/green-day.jpg" },
+  { id: 6, title: "Pre-Primary Sweet Corn Chef Celebration", category: "Cultural", image: "/images/events/sweet-corn-party.jpg" },
+  { id: 7, title: "Solar System Planetary Model Activity", category: "Classrooms", image: "/images/events/solar-system-activity.jpg" },
+  { id: 8, title: "Science Eclipse Practical Experiment", category: "Classrooms", image: "/images/events/eclipse-practical.jpg" },
+  { id: 9, title: "Paper Craft & Butterfly Making Activity", category: "Classrooms", image: "/images/events/butterfly-craft.jpg" },
+  { id: 10, title: "School Sports Tournament & Athletics Squad", category: "Sports", image: "/images/events/sports-tournament.jpg" },
+  { id: 11, title: "Independence Day Flag Salute & March-Past", category: "Events", image: "/images/events/independence-day.jpg" },
+  { id: 12, title: "Tree Plantation Campus Greening Drive", category: "Events", image: "/images/events/tree-plantation.jpg" },
+  { id: 13, title: "Wildlife & Snake Awareness Workshop", category: "Events", image: "/images/events/wildlife-awareness.jpg" },
+  { id: 14, title: "Eco-Friendly Cloth Bag Making Initiative", category: "Events", image: "/images/events/cloth-bag-making.jpg" },
+  { id: 15, title: "Fancy Dress & National Heroes Showcase", category: "Events", image: "/images/events/fancy-dress.jpg" },
+  { id: 16, title: "Faculty & Staff Collaboration Room", category: "Campus", image: "/images/teacher-staff-room.jpg" }
 ];
 
 export const facultyList = [
   {
     id: "fac-1",
     name: "SAWANT JAYSHREE TANAJI",
-    role: "Head Teacher",
-    department: "School Administration & Academics",
+    role: "Principal (English Medium Wing)",
+    department: "English Medium Administration",
     degree: "B.A., B.Ed., D.T.Ed.",
-    bio: "Guiding Shri Dattabal Vidyamandir with visionary leadership, academic discipline, and a deep dedication to student character building and academic excellence.",
-    image: null
+    bio: "Guiding Shri Dattabal English Medium School with visionary leadership, academic discipline, and a deep dedication to student character building and academic excellence.",
+    image: "/images/principal.jpg"
+  },
+  {
+    id: "fac-1b",
+    name: "Principal (Semi-English Medium)",
+    role: "Principal (Semi-English Medium Wing)",
+    department: "Semi-English Medium Administration",
+    degree: "M.A., B.Ed.",
+    bio: "Steering the Semi-English Medium Wing with a balanced focus on bilingual STEM readiness (Science & Math in English) and cultural values.",
+    image: "/images/semi-english-principal.jpg"
   },
   {
     id: "fac-2",
@@ -630,7 +659,7 @@ export const facultyList = [
     department: "Languages, Mathematics, Science, Social Studies",
     degree: "D.Ed., B.Ed., M.A. Qualified",
     bio: "Experienced educators delivering student-centric education across Languages, English, Mathematics, General Science, and History-Geography.",
-    image: null
+    image: "/images/teacher-staff-room.jpg"
   },
   {
     id: "fac-3",
@@ -639,7 +668,7 @@ export const facultyList = [
     department: "Early Childhood Education & Play-Way Learning",
     degree: "Montessori & Early Childhood Care Certified",
     bio: "Compassionate educators who create a joyful, foundational learning environment for nursery, junior KG, and senior KG children.",
-    image: null
+    image: "/images/events/sweet-corn-party.jpg"
   },
   {
     id: "fac-4",
@@ -648,7 +677,7 @@ export const facultyList = [
     department: "Physical Education, Lezim & Creative Arts",
     degree: "B.P.Ed. / Art Certificate",
     bio: "Mentoring children in sportsmanship, Lezim drills, drawing competitions, cultural plays, and moral assemblies.",
-    image: null
+    image: "/images/events/sports-tournament.jpg"
   }
 ];
 
@@ -657,5 +686,32 @@ export const admissionsSteps = [
   { step: "02", title: "Document Submission", desc: "Submit the filled form with Birth Certificate, Aadhaar Card, Transfer Certificate (if applicable), and 3 passport photos." },
   { step: "03", title: "Parent & Student Interaction", desc: "A friendly orientation meeting with Head Teacher Sawant Jayshree Tanaji and class teachers." },
   { step: "04", title: "Enrollment Confirmation", desc: "Receive the official admission confirmation and collect textbook and uniform guidelines for the April session." }
+];
+
+export const trusteesList = [
+  {
+    id: "trustee-1",
+    name: "Trustee 1",
+    role: "President / Managing Trustee",
+    trust: "Shri Dattabal Mission Divine, Kolhapur",
+    image: "/images/trustee-1.jpg",
+    bio: "Guiding the educational vision and moral values of Shri Dattabal Mission Divine, ensuring holistic growth and quality education for all students."
+  },
+  {
+    id: "trustee-2",
+    name: "Trustee 2",
+    role: "Secretary / Trustee",
+    trust: "Shri Dattabal Mission Divine, Kolhapur",
+    image: "/images/trustee-2.jpg",
+    bio: "Overseeing institutional administration, infrastructure development, and student welfare across English and Semi-English wings."
+  },
+  {
+    id: "trustee-3",
+    name: "Trustee 3",
+    role: "Trustee",
+    trust: "Shri Dattabal Mission Divine, Kolhapur",
+    image: "/images/trustee-3.jpg",
+    bio: "Supporting academic programs, community outreach, and cultural heritage initiatives of Shri Dattabal Vidyamandir since its inception."
+  }
 ];
 
